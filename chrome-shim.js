@@ -44,4 +44,13 @@
     },
     i18n: { getMessage: k => k, getUILanguage: () => navigator.language }
   };
+    if (!navigator.webkitPersistentStorage) {
+    const q = { quota: 1024 * 1024 * 1024, used: 0 };
+    const store = {
+      requestQuota(bytes, ok) { if (ok) ok(bytes || q.quota); },
+      queryUsageAndQuota(ok) { if (ok) ok(q.used, q.quota); }
+    };
+    navigator.webkitPersistentStorage = store;
+    navigator.webkitTemporaryStorage = store;
+  }
 })();
