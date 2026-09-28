@@ -132,6 +132,15 @@ function isElectron() {
 }
 
 $(function () {
+  const settingButton = document.getElementById("setting");
+  const settingModal = document.getElementById("modal_setting");
+  settingButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    settingButton.classList.add("active");
+    settingModal.classList.add("active");
+  });
+
   // Tooltip
   $(".tooltip").tooltipster({
     position: "bottom",
@@ -333,7 +342,7 @@ $(function () {
   });
 
   // 打開Modal
-  $("[data-target]").on("click", function (e) {
+  $("[data-target]:not(#setting)").on("click", function (e) {
     let $this = $(this);
     let $target = $this.attr("data-target");
     let $dom = $("#" + $target);
