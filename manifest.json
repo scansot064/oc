@@ -1,0 +1,27 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "OKIOCAM Live",
+  "version": "1.0.7",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "icons": {
+    "128": "icon/OKIOCAM_Live-128x128.png"
+  },
+  "manifest_version": 3,
+  "action": {},
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "assets/resolutions.json" ],
+      "extension_ids": ["*"],
+      "matches": [ "*://*/*" ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';worker-src 'self' 'wasm-unsafe-eval'"
+  }
+}

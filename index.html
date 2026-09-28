@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="OKIOCAM Live" />
+    <base target="_blank" />
+
+    <title>OKIOCAM Live</title>
+    <link rel="icon" href="../icon/OKIOCAM Live.ico" type="./image/png" />
+
+    <link rel="stylesheet" href="./css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" href="./css/main.dist.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+
+    <style>
+      label textarea {
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body class="active" style="min-width: 600px; min-height: 480px">
+    <div id="record-confirm" title="__MSG_recordWarningTitle__" class="hide">
+      <p>__MSG_recordWarningMsg__</p>
+    </div>
+    <div id="record-confirm2" class="hide" title="__MSG_recordWarningTitle__">
+      <p>__MSG_recordWarningMsg3__</p>
+    </div>
+    <div id="main" class="wrap" style="display: flex; flex-wrap: nowrap">
+      <header><span class="header-title">OKIOCAM Live</span></header>
+      <div id="liveMode" class="live-mode">
+        <div id="liveContainer" class="live-container">
+          <!-- eventFrame -->
+          <div id="liveFrame" class="live-tool-frame" style="z-index: 5">
+            <div id="eventFrame" class="live-content-frame">
+              <div id="eraserCursor" style="pointer-events: none"></div>
+            </div>
+            <div
+              id="pipFrame"
+              class="hide"
+              style="
+                position: absolute;
+                left: -100000px;
+                margin: 0 auto;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid black;
+                z-index: 10;
+              "
+            >
+              <video
+                id="pipVideo"
+                disable-contextmenu
+                autoplay
+                muted
+                style="height: 100%; position: relative; margin: 0px"
+              ></video>
+            </div>
+          </div>
+          <!-- liveVideo -->
+          <div class="live-tool-frame" style="z-index: 1">
+            <!-- z-index:1 -->
+            <video
+              id="live"
+              class="live-content-frame"
+              style="pointer-events: none"
+              data-scale="1.0"
+              data-left="0"
+              data-top="0"
+              data-rotate="0"
+              data-mirror=""
+              disable-contextmenu
+              autoplay
+              muted
+            ></video>
+          </div>
+          <!-- detectPaint -->
+          <div class="live-tool-frame" style="z-index: 2">
+            <canvas id="detectPaint" class="live-content-frame" style="pointer-events: none"> </canvas>
+          </div>
+          <!-- canvasPaint -->
+          <div class="live-tool-frame" style="z-index: 3">
+            <canvas id="canvasPaint" class="live-content-frame" style="pointer-events: none"></canvas>
+          </div>
+          <!-- pluginFrame (okiopoint tool component) -->
+          <div class="live-tool-frame" style="z-index: 4">
+            <div id="pluginFrame" class="live-conetnt-frame highlightFrame" style="pointer-events: none">
+              <div class="highlightTool highlightRect" style="display: none"></div>
+            </div>
+            <div class="spotlight hide" style="pointer-events: none"></div>
+          </div>
+          <div
+            id="hline"
+            style="
+              width: 100%;
+              height: 4px;
+              background-color: white;
+              top: calc(50% - 2px);
+              position: absolute;
+              z-index: 98;
+            "
+            class="hide"
+          ></div>
+          <div
+            id="vline"
+            style="
+              width: 4px;
+              height: 100%;
+              background-color: white;
+              top: 0;
+              left: calc(50% - 2px);
+              position: absolute;
+              z-index: 98;
+            "
+            class="hide"
+          ></div>
+          <!-- focusFrame -->
+          <div class="focusFrame hide">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div id="recordControl" class="area-record">
+          <!-- snap shot -->
+          <a
+            href="#"
+            target="_self"
+            id="snapshot"
+            class="btn btn-circle btn-circle-lg btn-blue btn-camera tooltip"
+            title="__MSG_snapshotTooltip__"
+          >
+            <img src="./image/main_window/ic_camera.png" width="47" />
+          </a>
+          <!-- record -->
+          <a href="" target="_self" id="record" class="btn btn-circle btn-circle-lg btn-blue tooltip" title="__MSG_recordTooltip__">
+            <img src="./image/start_record.png" width="47" />
+          </a>
+          <!-- swap camera -->
+          <a
+            href=""
+            target="_self"
+            id="swap"
+            class="btn btn-circle btn-circle-lg btn-blue tooltip hide"
+            title="__MSG_swapCameras__"
+          >
+            <img src="./image/ic_camera_swap.png" width="47" />
+          </a>
+          <div class="countdown">
+            <div id="countdownCircle" class="c100">
+              <span id="countdownText">3</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="recordingControl" class="area-record hide">
+          <!-- stop -->
+          <a href="#" target="_self" id="stop" class="btn btn-circle btn-circle-lg tooltip" title="__MSG_recordStopTooltip__">
+            <img src="./image/stop_record.png" width="47" />
+          </a>
+          <!-- pause -->
+          <a
+            href="#"
+            target="_self"
+            id="pause"
+            class="btn btn-circle btn-circle-lg tooltip"
+            style="display: inline-block"
+            title="__MSG_recordPauseTooltip__"
+          >
+            <img src="./image/pause_record.png" width="47" />
+          </a>
+          <!-- resume -->
+          <a
+            href="#"
+            target="_self"
+            id="resume"
+            class="btn btn-circle btn-circle-lg tooltip hide"
+            style="display: inline-block"
+            title="__MSG_recordResumeTooltip__"
+          >
+            <img src="./image/start_record.png" width="47" />
+          </a>
+          <!-- swap camera -->
+          <!-- <a
+            href="#"
+            target="_self"
+            id="swap2"
+            class="btn btn-circle btn-circle-lg btn-blue tooltip"
+            style="display: inline-block"
+            title="Swap Cameras"
+          >
+            <img src="./image/ic_swap.png" width="47" />
+          </a> -->
+          <div id="recordInfo" class="record-note">
+            <!-- Recording -->
+            <!-- <div id="timer" class="time">00:00 / 60:00</div> -->
+            <div id="timer" class="time">00:00</div>
+          </div>
+          <div id="volume" class="volume hide">
+            <a href="#" target="_self" class="icon tooltip" title="__MSG_micTooltip__"></a>
+            <canvas id="volumeRecord" class="volume-level volume-record"></canvas>
+            <input
+              id="recordSlider"
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              value="0.5"
+              class="volume-slider mic-slider"
+            />
+          </div>
+        </div>
+        <aside class="active">
+          <div id="leftMenu" class="tool">
+            <!-- control -->
+            <a class="btn btn-grey btn-control tooltip" title="__MSG_menuTooltip__">
+              <img src="./image/tool_bar/ic_control.png" />
+              <img src="./image/tool_bar/ic_control-activated.png" class="hide" />
+            </a>
+            <!-- annotator -->
+            <a class="btn btn-grey btn-annotator btn-annotator-brush tooltip" title="__MSG_annotatorTooltip__">
+              <img src="./image/tool_bar/ic_annotator.png" />
+              <img src="./image/tool_bar/ic_annotator-activated.png" class="hide" />
+            </a>
+            <a class="btn btn-grey btn-annotator btn-annotator-menu tooltip" title="__MSG_annotatorMenuTooltip__">
+              <img src="./image/tool_bar/ic_annotator_menu.png" />
+              <img src="./image/tool_bar/ic_annotator_menu-activated.png" class="hide" />
+            </a>
+            <a class="btn btn-grey btn-annotator btn-annotator-clear tooltip" title="__MSG_eraseAllTooltip__">
+              <img src="./image/tool_bar/ic_annotator_clear.png" />
+            </a>
+            <!-- mirror -->
+            <a class="btn btn-grey btn-camera-flip tooltip" id="mirror" title="__MSG_mirrorTooltip__">
+              <img src="./image/tool_bar/ic_camera_mirror.png" />
+              <img src="./image/tool_bar/ic_camera_mirror-activated.png" class="hide" />
+            </a>
+            <!-- okiopoint -->
+            <a class="btn btn-grey btn-okiopoint tooltip" title="__MSG_okiopointTooltip__">
+              <input id="qrCodeTrack" name="qrCodeTrack" type="checkbox" style="display: none" data-firstLoad="true" />
+              <img src="./image/tool_bar/ic_OKIOPoint.png" class="okiopoint" />
+              <img src="./image/tool_bar/ic_OKIOPoint-activated.png" class="okiopoint-activated" />
+              <img src="./image/tool_bar/ic_OKIOPoint-unavaliable.png" class="okiopoint-unavaliable" />
+            </a>
+          </div>
+          <div id="controls" class="control">
+            <ul>
+              <li id="zoom">
+                <div class="title tooltip" title="__MSG_zoomTooltip__">
+                  <img src="./image/ic_control_panel/zoom.png" />
+                  <div id="zoomText" class="text">1.0x</div>
+                </div>
+                <div class="con">
+                  <div class="prev">
+                    <a href="#" target="_self" class="title tooltip" title="__MSG_zoomInTooltip__"
+                      ><img id="zoomin" src="./image/ic_control_panel/zoom-plus.png"
+                    /></a>
+                  </div>
+                  <div class="slider-control">
+                    <input id="zoomSlider" class="side-slider-bar" type="range" min="1" max="6" step="0.1" value="1" />
+                  </div>
+                  <div class="next">
+                    <a href="#" target="_self" class="title tooltip" title="__MSG_zoomOutTooltip__">
+                      <img id="zoomout" src="./image/ic_control_panel/zoom-minus.png" />
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li id="exposure" class="hide">
+                <div class="title tooltip" title="__MSG_expTooltip__">
+                  <img src="./image/ic_control_panel/exposure.png" />
+                  <div id="expValue" class="text">+0</div>
+                </div>
+                <div class="con">
+                  <div class="prev">
+                    <a href="#" target="_self" class="title tooltip" title="__MSG_expAddTooltip__"
+                      ><img id="expAdd" src="./image/ic_control_panel/exposure-increase.png"
+                    /></a>
+                  </div>
+                  <div class="slider-control">
+                    <input id="expSlider" class="side-slider-bar" type="range" min="1" max="15" step="1" value="8" />
+                  </div>
+                  <div class="next">
+                    <a href="#" target="_self" class="title tooltip" title="__MSG_expMinusTooltip__"
+                      ><img id="expMinus" src="./image/ic_control_panel/exposure-reduce.png"
+                    /></a>
+                  </div>
+                </div>
+              </li>
+              <li id="rotate" class="orientation">
+                <div class="title">
+                  <a href="#" target="_self" class="btn tooltip" title="__MSG_rotateTooltip__"
+                    ><img id="rotateSign" src="./image/ic_control_panel/view_orientation.png"
+                  /></a>
+                  <a href="#" target="_self" class="btn tooltip" title="__MSG_rotateRightTooltip__"
+                    ><img id="rotateright" src="./image/ic_control_panel/rotate_view_CCW.png"
+                  /></a>
+                  <a href="#" target="_self" class="btn tooltip" title="__MSG_rotateLeftTooltip__"
+                    ><img id="rotateleft" src="./image/ic_control_panel/rotate_view_CW.png"
+                  /></a>
+                </div>
+              </li>
+              <li class="operate">
+                <div class="title">
+                  <div id="freezeDiv">
+                    <a href="#" target="_self" class="btn btn-freeze tooltip" title="__MSG_freezeTooltip__" id="freezeButton"
+                      ><img id="freeze" src="./image/ic_control_panel/freeze.png"
+                    /></a>
+                  </div>
+                  <div id="focusDiv">
+                    <a href="#" target="_self" class="btn tooltip" title="__MSG_focusTooltip__" id="focusButton"
+                      ><img id="focus" src="./image/ic_control_panel/focus.png"
+                    /></a>
+                  </div>
+                  <a href="#" target="_self" id="reset" class="btn tooltip" title="__MSG_resetTooltip__"
+                    ><img src="./image/ic_control_panel/reset.png"
+                  /></a>
+                </div>
+              </li>
+              <li class="lsz hide">
+                <img class="lsz-lv lsz-lv-1" />
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <div id="annotatorControl" class="annotator">
+          <div class="option-group">
+            <div data-color="#ff0000" class="option-item color-item"></div>
+            <div data-color="#0000ff" class="option-item color-item"></div>
+            <div data-color="#008000" class="option-item color-item"></div>
+            <div data-color="#ffff00" class="option-item color-item"></div>
+            <div data-color="#ffa500" class="option-item color-item color-item-custom">
+              <input
+                class="custom-color_one cutom-color-input"
+                list="colorList"
+                type="color"
+                value="#ffa500"
+                data-clicktime="0"
+              />
+            </div>
+            <div data-color="#000000" class="option-item color-item color-item-custom">
+              <input
+                class="custom-color_two cutom-color-input"
+                list="colorList"
+                type="color"
+                value="#000000"
+                data-clicktime="0"
+              />
+            </div>
+          </div>
+          <div class="thickness-group">
+            <canvas class="thickness-canvas" width="80" height="80" data-color="#000000"> </canvas>
+            <input class="thickness-input" type="range" max="80" min="5" value="20" step="1" />
+          </div>
+          <div class="option-group">
+            <div class="option-item pen-item pen-freehand activated tooltip" title="__MSG_freehandTooltip__" data-pentype="freehand">
+              <img src="./image/annotator_panel/freehand.png" />
+              <img src="./image/annotator_panel/freehand-hover.png" />
+              <img src="./image/annotator_panel/freehand-activated.png" />
+            </div>
+            <div class="option-item pen-item pen-diagonal_line tooltip" title="__MSG_lineTooltip__" data-pentype="diagonal_line">
+              <img src="./image/annotator_panel/diagonal_line.png" />
+              <img src="./image/annotator_panel/diagonal_line-hover.png" />
+              <img src="./image/annotator_panel/diagonal_line-activated.png" />
+            </div>
+            <div class="option-item pen-item pen-line_arrow tooltip" title="__MSG_arrowTooltip__" data-pentype="line_arrow">
+              <img src="./image/annotator_panel/line_arrow.png" />
+              <img src="./image/annotator_panel/line_arrow-hover.png" />
+              <img src="./image/annotator_panel/line_arrow-activated.png" />
+            </div>
+            <div class="option-item pen-item pen-rectangle tooltip" title="__MSG_rectangleTooltip__" data-pentype="rectangle">
+              <img src="./image/annotator_panel/rectangle.png" />
+              <img src="./image/annotator_panel/rectangle-hover.png" />
+              <img src="./image/annotator_panel/rectangle-activated.png" />
+            </div>
+            <div class="option-item pen-item pen-circle tooltip" title="__MSG_ellipseTooltip__" data-pentype="circle">
+              <img src="./image/annotator_panel/circle.png" />
+              <img src="./image/annotator_panel/circle-hover.png" />
+              <img src="./image/annotator_panel/circle-activated.png" />
+            </div>
+            <div class="option-item pen-item pen-eraser tooltip" title="__MSG_eraserTooltip__" data-pentype="eraser">
+              <img src="./image/annotator_panel/eraser.png" />
+              <img src="./image/annotator_panel/eraser-hover.png" />
+              <img src="./image/annotator_panel/eraser-activated.png" />
+            </div>
+          </div>
+          <div class="option-group">
+            <div class="option-item operate-item tooltip" title="__MSG_undoTooltip__" data-optype="undo">
+              <img src="./image/annotator_panel/undo_arrow.png" alt="" />
+            </div>
+            <div class="option-item operate-item tooltip" title="__MSG_redoTooltip__" data-optype="redo">
+              <img src="./image/annotator_panel/redo_arrow.png" alt="" />
+            </div>
+            <div class="option-item operate-item tooltip" title="__MSG_eraseAllTooltip__" data-optype="clear">
+              <img src="./image/annotator_panel/clear.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="effectControl" class="control3 hide">
+          <ul>
+            <li>
+              <span>Keystone adjustment(H):</span>
+              <input id="keystoneHorizontal" type="range" min="0" max="50" step="1" value="25" />
+            </li>
+            <li>
+              <span>Keystone adjustment(V):</span>
+              <input id="keystoneVertical" type="range" min="0" max="50" step="1" value="25" />
+            </li>
+            <li>
+              <span>Rotate:</span>
+              <input id="rotateSlider" type="range" min="0" max="360" step="1" value="0" />
+            </li>
+            <li>
+              <span>Brightness:</span>
+              <input id="brightnessSlider" type="range" min="1" max="100" step="1" value="100" />
+            </li>
+            <li>
+              <span>Contrast:</span>
+              <input id="contrastSlider" type="range" min="1" max="100" step="1" value="100" />
+            </li>
+            <li>
+              <span>Hue:</span>
+              <input id="hueSlider" type="range" min="0" max="360" step="1" value="0" />
+            </li>
+            <li>
+              <span>Saturation:</span>
+              <input id="saturationSlider" type="range" min="0" max="100" step="1" value="100" />
+            </li>
+            <li>
+              <span>Sepia:</span>
+              <input id="sepiaSlider" type="range" min="0" max="100" step="1" value="0" />
+            </li>
+            <li>
+              <span>Grayscale:</span>
+              <input id="grayscaleSlider" type="range" min="0" max="100" step="1" value="0" />
+            </li>
+            <li><input id="spotlightSwitch" type="checkbox" /><span style="margin-left: 5px">Spotlight</span></li>
+          </ul>
+        </div>
+        <nav>
+          <div class="dropdown hide">
+            <a href="#" target="_self" id="apps" class="btn btn-menu tooltip hide" title="__MSG_appsTooltip__">
+              <img src="./image/app-menu.png" width="36" />
+              <img src="./image/app-menu-active.png" width="36" class="hide" />
+            </a>
+            <div class="popup hide">
+              <ul class="menu app-menu">
+                <li>
+                  <a href="#" target="_self" id="okiocam"><img src="./image/app-okiocam.png" />__MSG_appSnapshot__</a>
+                </li>
+                <li>
+                  <a href="#" target="_self" id="timelapse"
+                    ><img src="./image/app-timelapse.png" />__MSG_appTimelapse__</a
+                  >
+                </li>
+                <li>
+                  <a href="#" target="_self" id="stopmotion"
+                    ><img src="./image/app-stop-motion.png" />__MSG_appStopmotion__</a
+                  >
+                </li>
+              </ul>
+              <div class="arrow arrow-up"></div>
+            </div>
+          </div>
+          <a id="openFolder" class="btn btn-grey tooltip hide" title="__MSG_openLibraryTooltip__">
+            <img src="./image/tool_bar/review_mode.png" width="36" />
+          </a>
+          <a
+            href="#"
+            target="_self"
+            id="setting"
+            class="btn btn-setting btn-grey tooltip"
+            data-target="modal_setting"
+            title="__MSG_settingTooltip__"
+          >
+            <img src="./image/tool_bar/ic_cog.png" width="36" />
+            <img src="./image/tool_bar/ic_cog-activated.png" width="36" class="hide" />
+          </a>
+          <a href="#" target="_self" id="fullscreen" class="btn btn-full-screen tooltip" title="__MSG_fullscreenTooltip__">
+            <img src="./image/tool_bar/regular_screen_overlay.png" width="36" />
+            <img src="./image/tool_bar/full_screen_overlay.png" width="36" class="hide" />
+          </a>
+        </nav>
+        <div id="zoomArea" class="area-zoom">
+          <span id="zoomRatio">1.0x</span>
+          <div id="zoomPanel" class="frame" style="overflow: hidden">
+            <div id="zoomView" class="line" style="width: 100%; height: 100%; flex-shrink: 0"></div>
+            <div class="QRCodeDotHints"></div>
+          </div>
+        </div>
+        <div class="area-upload active">
+          <div id="uploadProgress" class="status close-dom">
+            <div class="progress">
+              <div class="title"><img src="./image/upload-image.png" width="15" />__MSG_uploadingText__</div>
+              <!--<div class="uploading"></div>-->
+              <progress id="liveProgressBar" value="1" max="100"></progress>
+              <div id="liveProgressText" class="text">1% __MSG_uploadingDone__</div>
+            </div>
+            <a href="#" target="_self" class="close">
+              <img src="./image/large-close.png" />
+            </a>
+          </div>
+          <div id="areaReview" class="con hide">
+            <div id="toreview" class="frame tooltip" title="__MSG_reviewTooltip__"></div>
+          </div>
+        </div>
+        <div id="freezeMode" class="mark-freeze btn btn-circle btn-grey tooltip" title="__MSG_freezeModeTooltip__">
+          <img src="./image/main_window/freeze_mode.png" width="36" />
+        </div>
+        <div class="modal modal-setting close-dom" id="modal_setting">
+          <div class="modal-dialog">
+            <a href="#" target="_self" class="toggle">
+              <img src="./image/ic_arrow_right.png" />
+            </a>
+            <div class="modal-content">
+              <div class="config-board">
+                <!-- CameraSetting.js -->
+                <!-- <div id="CameraSettings">
+                  <div class="config-section">
+                    <div class="config-section-title">Main Camera</div>
+                    <div class="config-item">
+                      <span>Source</span>
+                      <select class="custom-config-select custom-config-select-large" v-model="main.selectedDevice">
+                        <option
+                          v-for="device in main.devices"
+                          :value="device.deviceId"
+                          :data-vid="device.vid"
+                          :data-pid="device.pid"
+                        >
+                          {{ device.label }}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="config-item">
+                      <span>Resolution</span>
+                      <select
+                        class="custom-config-select custom-config-select-large"
+                        v-model="main.selectedResolution"
+                      >
+                        <option
+                          v-for="resolution in main.resolutions"
+                          :value="resolution.value"
+                          :data-resWidth="resolution.width"
+                          :data-resHeight="resolution.height"
+                        >
+                          {{ resolution.label === main.default ? `${resolution.label}(default)`: resolution.label }}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="config-section">
+                    <div class="config-section-title">Secondary Camera</div>
+                    <div class="config-item">
+                      <span>Source</span>
+                      <select class="custom-config-select custom-config-select-large" v-model="second.selectedDevice">
+                        <option
+                          v-for="device in second.devices"
+                          :value="device.deviceId"
+                          :data-vid="device.vid"
+                          :data-pid="device.pid"
+                        >
+                          {{ device.label }}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="config-item">
+                      <span>Resolution</span>
+                      <select
+                        class="custom-config-select custom-config-select-large"
+                        v-model="second.selectedResolution"
+                      >
+                        <option
+                          v-for="resolution in second.resolutions"
+                          :value="resolution.value"
+                          :data-resWidth="resolution.width"
+                          :data-resHeight="resolution.height"
+                          :disabled="resolution.disabled"
+                        >
+                          {{ resolution.label }}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="config-item">
+                      <span>Position</span>
+                      <select class="custom-config-select custom-config-select-large" v-model="pip.position">
+                        <option value="1">Top left</option>
+                        <option value="2">Top right</option>
+                        <option value="3">Bottom left</option>
+                        <option value="4">Bottom right</option>
+                        <option value="5">Customize</option>
+                      </select>
+                    </div>
+                    <div class="config-item">
+                      <span>Size</span>
+                      <select class="custom-config-select custom-config-select-large" v-model="pip.size">
+                        <option value="1">Large</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Small</option>
+                      </select>
+                    </div>
+                  </div>
+                </div> -->
+                <!-- CameraSetting.js -->
+
+                <div class="config-section">
+                  <input type="file" id="chooseFile" accept="image/png" style="position: absolute; top:-100px;">
+                  <div class="config-section-title">__MSG_mainCamera__</div>
+                  <div class="config-item">
+                    <span>__MSG_cameraSource__</span>
+                    <select id="videoSource" class="custom-config-select custom-config-select-large"></select>
+                  </div>
+                  <div class="config-item">
+                    <span>__MSG_snapshotSettingResolution__</span>
+                    <select id="resolution" class="custom-config-select custom-config-select-large"></select>
+                  </div>
+                </div>
+                <div class="config-section">
+                  <div class="config-section-title">__MSG_secondaryCamera__</div>
+                  <div class="config-item">
+                    <span>__MSG_cameraSource__</span>
+                    <select id="pipSource" class="custom-config-select custom-config-select-large"></select>
+                  </div>
+                  <div class="config-item">
+                    <span>__MSG_snapshotSettingResolution__</span>
+                    <select id="pipResolution" class="custom-config-select custom-config-select-large">
+                      <option value="1">640x480</option>
+                      <option value="2">800x600</option>
+                      <option value="3">1024x768</option>
+                      <option value="4">1280x720</option>
+                      <option value="5">1600x1200</option>
+                      <option value="6">1920x1080</option>
+                      <option value="7">1920x1440</option>
+                      <option value="8">2048x1536</option>
+                      <option value="9">2592x1458</option>
+                      <option value="10">2592x1944</option>
+                      <option value="11">3264x1836</option>
+                      <option value="12">3264x2448</option>
+                      <option value="13">3840x2160</option>
+                      <option value="14">4192x3104</option>
+                    </select>
+                  </div>
+                  <div class="config-item">
+                    <span>__MSG_pipPosition__</span>
+                    <select id="pipPosition" class="custom-config-select custom-config-select-large">
+                      <option value="1">__MSG_pipTopLeft__</option>
+                      <option value="2">__MSG_pipTopRight__</option>
+                      <option value="3">__MSG_pipBottomLeft__</option>
+                      <option value="4" selected>__MSG_pipBottomRight__</option>
+                      <option value="5">__MSG_pipCustomize__</option>
+                      <option value="6" style="display: none">Side by side</option>
+                    </select>
+                  </div>
+                  <div class="config-item">
+                    <span>__MSG_pipSize__</span>
+                    <select id="pipSize" class="custom-config-select custom-config-select-large">
+                      <option value="1">__MSG_optionSize1__</option>
+                      <option value="2">__MSG_optionSize2__</option>
+                      <option value="3" selected>__MSG_optionSize3__</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="config-section">
+                  <div class="config-section-title">__MSG_settingTooltip__</div>
+                  <div class="config-item">
+                    <span>__MSG_microphone__</span>
+                    <select id="audioSource" class="custom-config-select custom-config-microphone-large"></select>
+                  </div>
+                  <div class="config-item">
+                    <span class="tooltip tooltipstered" title="__MSG_recordResolutionTooltip__">__MSG_recordResolution__</span>
+                    <div id="videoQuality" class="custom-config-quality">1600x1200</div>
+                  </div>
+                  <div class="config-item hide" id="libraryItem">
+                    <span>__MSG_libraryFolder__</span>
+                    <div class="custom-config-library">
+                      <span id="folderPath" class="library-path"> </span>
+                      <button id="chooseFolder">__MSG_llibraryFolderChangeBtn__</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="config-section okiopoint-section" id="okiopoint-board">
+                  <div class="config-section-title okiopoint-title">OKIOPoint</div>
+                  <!-- okiopoint switch -->
+                  <div class="config-item okiopoint-item-switch">
+                    <span>Enable</span>
+                    <div class="okiopoint-switch">
+                      <img src="./image/config_panel/switch-on.png" alt="" />
+                      <img src="./image/config_panel/switch-off.png" alt="" />
+                    </div>
+                    <span>Disable</span>
+                  </div>
+                  <!-- okiotpoint track speed -->
+                  <div class="config-item okiopoint-item-speed">
+                    <div style="display: flex; justify-content: space-between">
+                      <span class="config-name">Pan Speed</span>
+                      <div class="custom-slider-bar">
+                        <img src="./image/config_panel/zoom-minus.png" />
+                        <input class="custom-config-input" type="range" max="800" min="100" step="50" value="550" />
+                        <img src="./image/config_panel/zoom-plus.png" />
+                        <span> 10 </span>
+                      </div>
+                    </div>
+                    <div class="config-reset">
+                      <img src="./image/config_panel/OKIOPoint-config_reset.png" alt="" />
+                    </div>
+                  </div>
+                  <!-- okiopoint fn -->
+                  <div class="config-item okiopoint-item-fn okiopoint-item-fn_1">
+                    <span class="config-icon">
+                      <img src="./image/config_panel/OKIOPoint-Fn1.png" />
+                    </span>
+                    <div class="config-fn">
+                      <div class="fn-option fn-option-select">
+                        <span class="config-name"> 1: </span>
+                        <select class="custom-config-select custom-config-select-medium">
+                          <option value="">Zoom and Follow</option>
+                        </select>
+                      </div>
+                      <div class="fn-option fn-option-slider">
+                        <span class="config-name">
+                          <img src="./image/config_panel/OKIOPoint-Zoom.png" />
+                        </span>
+                        <div class="custom-slider-bar">
+                          <img src="./image/config_panel/zoom-minus.png" />
+                          <input class="custom-config-input" type="range" max="800" min="100" step="50" value="550" />
+                          <img src="./image/config_panel/zoom-plus.png" />
+                          <span> 1.8x </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="config-reset">
+                      <img src="./image/config_panel/OKIOPoint-config_reset.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="config-item okiopoint-item-fn okiopoint-item-fn_2">
+                    <span class="config-icon">
+                      <img src="./image/config_panel/OKIOPoint-Fn2.png" />
+                    </span>
+                    <div class="config-fn">
+                      <div class="fn-option fn-option-select">
+                        <span class="config-name"> 1: </span>
+                        <select class="custom-config-select custom-config-select-medium">
+                          <option value="">Zoom and Follow</option>
+                        </select>
+                      </div>
+                      <div class="fn-option fn-option-select half left">
+                        <span class="config-name"> W: </span>
+                        <select class="custom-config-select custom-config-select-small">
+                          <option value="">Medium</option>
+                        </select>
+                      </div>
+                      <div class="fn-option fn-option-select half right">
+                        <span class="config-name"> H: </span>
+                        <select class="custom-config-select custom-config-select-small">
+                          <option value="">Medium</option>
+                        </select>
+                      </div>
+                      <div class="fn-option fn-option-slider">
+                        <span class="config-name">
+                          <img src="./image/config_panel/OKIOPoint-Zoom.png" />
+                        </span>
+                        <div class="custom-slider-bar">
+                          <img src="./image/config_panel/zoom-minus.png" />
+                          <input class="custom-config-input" type="range" max="800" min="100" step="50" value="550" />
+                          <img src="./image/config_panel/zoom-plus.png" />
+                          <span> 1.8x </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="config-reset">
+                      <img src="./image/config_panel/OKIOPoint-config_reset.png" alt="" />
+                    </div>
+                  </div>
+                  <!-- <div class="config-item okiopoint-item-fn okiopoint-item-fn_3">
+                  <span class="config-icon">
+                    <img src="./image/config_panel/OKIOPoint-Fn3.png">
+                  </span>
+                  <div class="config-fn">
+                    <div class="fn-option fn-option-select ">
+                      <span class="config-name">
+                        1:
+                      </span>
+                      <select class="custom-config-select custom-config-select-medium">
+                        <option value="">Zoom and Follow</option>
+                      </select>
+                    </div>
+                    <div class="fn-option fn-option-select half left">
+                      <span class="config-name">
+                        W:
+                      </span>
+                      <select class="custom-config-select custom-config-select-small">
+                        <option value="">Medium</option>
+                      </select>
+                    </div>
+                    <div class="fn-option fn-option-select half right">
+                      <span class="config-name">
+                        H:
+                      </span>
+                      <select class="custom-config-select custom-config-select-small">
+                        <option value="">Medium</option>
+                      </select>
+                    </div>
+                    <div class="fn-option fn-option-slider">
+                      <span class="config-name">
+                        <img src="./image/config_panel/OKIOPoint-Zoom.png">
+                      </span>
+                      <div class="custom-slider-bar">
+                        <img src="./image/config_panel/zoom-minus.png">
+                        <input class="custom-config-input" type="range" max="800" min="100" step="50" value="550">
+                        <img src="./image/config_panel/zoom-plus.png">
+                        <span>
+                          1.8x
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="config-reset">
+                    <img src="./image/config_panel/OKIOPoint-config_reset.png" alt="">
+                  </div>
+                </div>
+                <div class="config-item okiopoint-item-fn okiopoint-item-fn_4">
+                  <span class="config-icon">
+                    <img src="./image/config_panel/OKIOPoint-Fn4.png">
+                  </span>
+                  <div class="config-fn">
+                    <div class="fn-option fn-option-select ">
+                      <span class="config-name">
+                        1:
+                      </span>
+                      <select class="custom-config-select custom-config-select-medium">
+                        <option value="">Zoom and Follow</option>
+                      </select>
+                    </div>
+                    <div class="fn-option fn-option-select half left">
+                      <span class="config-name">
+                        W:
+                      </span>
+                      <select class="custom-config-select custom-config-select-small">
+                        <option value="">Medium</option>
+                      </select>
+                    </div>
+                    <div class="fn-option fn-option-select half right">
+                      <span class="config-name">
+                        H:
+                      </span>
+                      <select class="custom-config-select custom-config-select-small">
+                        <option value="">Medium</option>
+                      </select>
+                    </div>
+                    <div class="fn-option fn-option-slider">
+                      <span class="config-name">
+                        <img src="./image/config_panel/OKIOPoint-Zoom.png">
+                      </span>
+                      <div class="custom-slider-bar">
+                        <img src="./image/config_panel/zoom-minus.png">
+                        <input class="custom-config-input" type="range" max="800" min="100" step="50" value="550">
+                        <img src="./image/config_panel/zoom-plus.png">
+                        <span>
+                          1.8x
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="config-reset">
+                    <img src="./image/config_panel/OKIOPoint-config_reset.png" alt="">
+                  </div>
+                </div> -->
+                  <div class="config-item okiopoint-item-fn okiopoint-item-fn_0">
+                    <span class="config-icon">
+                      <img src="./image/config_panel/OKIOPoint-Fn0.png" />
+                    </span>
+                    <div class="config-fn">Reset</div>
+                  </div>
+                </div>
+                <div class="config-footer">
+                  <div>
+                    <img src="./image/config_panel/Config-OKIOLABS_Logo.png" />
+                  </div>
+                  <a id="about" href="https://www.okiolabs.com/apps-software-download/">__MSG_aboutUs__</a>
+                  <a id="help" href="https://okiolabs.zendesk.com/hc/en-us">__MSG_help__</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="verify-okiocam-dialog">
+      <p>__MSG_okiocamWarningMsg__</p>
+    </div>
+    <div id="verify-okiopoint-dialog">
+      <p>__MSG_okiopointWarningMsg2__</p>
+    </div>
+    <canvas id="preview" class="hide" style="left: 0; top: 0"> </canvas>
+    <canvas
+      id="tempCanvas"
+      style="width: 300px; position: absolute; left: 120px; top: 80px; z-index: 1000;" class="hide"
+    >
+    </canvas>
+
+    <div id="avatar-dialog" class="avatar-dialog hide">
+    </div>
+    <div id="avatar-gallery" class="avatar-gallery-box hide">
+      <div class="avatar-gallery">
+
+        <!-- Tabs -->
+        <div class="tab-header">
+          <button class="tab-button active" data-target="builtIn">__MSG_avatarBuiltin__</button>
+          <button class="tab-button" data-target="imported">__MSG_avatarImported__</button>
+        </div>
+        
+        <div class="tab-content">
+          <div class="cards tab-panel" id="builtIn">
+            <div class="holder built-in">
+              <img src="./image/Shutterstock_445756432.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/Shutterstock_447990049.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/Shutterstock_1982225375.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/Shutterstock_2251732831.png">
+            </div>
+
+            <div class="holder built-in">
+            <img src="./image/Shutterstock_2301916351.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_01.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_02.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_03.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_04.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/Cartoon_Male_Point.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/Animate_Male_Point.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/Pixar_Black_Baton.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/3D_Black_Baton.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_05.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_06.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_07.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_08.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_09.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_10.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_11.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/Shutterstock_1737556163.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/Shutterstock_32282944.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/pic3.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_13.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_14.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_15.png">
+            </div>
+
+            <div class="holder built-in">
+              <img src="./image/ChatGPT_16.png">
+            </div>
+
+          </div>
+
+          <div class="cards tab-panel hide" id="imported">
+            <div class="imported-info">
+              <p class="i18n" data-i18n="[html]Tip 1: Imported image must be PNG."><strong>Tip 1:</strong> Imported avatars must be in <strong>PNG</strong> format.</p>
+              <p class="i18n" data-i18n="[html]Tip 2: Using ChatGPT to generate you own Avatar."><strong>Tip 2:</strong> Want to create your own avatar? You can use ChatGPT to generate one. 
+                <a id="howto" href="https://www.okiolabs.com/how-to-use-chatgpt-to-convert-an-image-into-an-avatar-for-okiocam-live/" target="_blank">View this guide</a>.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="delete-avatar">__MSG_menuDelete__</button>
+          <button id="import-avatar" class="tooltip" title="__MSG_avatarImporttip__">__MSG_avatarImport__</button>
+          <button id="close-gallery">__MSG_btnOK__</button>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="./lib/jquery-3.5.1.min.js"></script>
+    <script defer src="./lib/jquery-ui.min.js"></script>
+    <script defer src="./lib/tooltipster.bundle.min.js"></script>
+    <script defer src="./lib/lodash.custom.min.js"></script>
+    <script defer src="./lib/react.production.min.js"></script>
+    <script defer src="./lib/react-dom.production.min.js"></script>
+    <!--<script>
+      if (window.module) module = window.module;
+    </script>-->
+
+    <!-- <script type="module" src="./js/setting.js"></script> -->
+    <script type="module" src="./js/main.js"></script>
+    <script defer src="./okiopoint/dist/OKIOPoint-Ext.compiled.js"></script>
+
+  </body>
+</html>
