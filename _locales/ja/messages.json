@@ -1,0 +1,996 @@
+{
+    "appName": {
+        "message": "OKIOCAM Live",
+        "description": "The title of the application, displayed in the web store."
+    },
+    "appDesc": {
+        "message": "The perfect app for live presentations. Display your camera's image on a larger screen or share it through conferencing software.",
+        "description": "The description of the application, displayed in the web store."
+    },
+    "appNameLive": {
+        "message": "OKIOCAM Live | ライブビューモード",
+        "description": "The title of the application in Live Mode"
+    },
+    "liveMode": {
+        "message": "ライブビューモード",
+        "description": "Live Mode in title"
+    },
+    "reviewMode": {
+        "message": "写真・動画一覧モード",
+        "description": "Review Mode in title"
+    },
+    "recordWarningTitle": {
+        "message": "録画を続けますか？",
+        "description": "Warning message title when recording"
+    },
+    "recordWarningMsg": {
+        "message": "<span class=\"ui-icon ui-icon-alert\"></span>OKIOCAM Live can only record in Zoom and Follow mode or with OKIOPoint disabled.  If you choose to proceed with the recording, OKIOPoint will be automatically disabled. Would you like to continue?",
+        "description": "Warning message when recording"
+    },
+    "menuTooltip": {
+        "message": "メニュー",
+        "description": "Tool tip string of menu button"
+    },
+    "selfieTooltip": {
+        "message": "自撮りモード",
+        "description": "Tool tip string of selfie button"
+    },
+    "mirrorTooltip": {
+        "message": "左右反転（鏡像）",
+        "description": "Tool tip string of mirror button"
+    },
+    "zoomTooltip": {
+        "message": "ズーム",
+        "description": "Tool tip string of zoom menu"
+    },
+    "zoomInTooltip": {
+        "message": "画面を拡大する",
+        "description": "Tool tip string of zoom in button"
+    },
+    "zoomOutTooltip": {
+        "message": "画面を縮小する",
+        "description": "Tool tip string of zoom out button"
+    },
+    "rotateTooltip": {
+        "message": "回転",
+        "description": "Tool tip string of rotate menu"
+    },
+    "rotateLeftTooltip": {
+        "message": "時計回り",
+        "description": "Tool tip string of rotate clockwise button"
+    },
+    "rotateRightTooltip": {
+        "message": "反時計回り",
+        "description": "Tool tip string of rotate counterclockwise button"
+    },
+    "expTooltip": {
+        "message": "露出補正",
+        "description": "Tool tip string of exposure menu"
+    },
+    "expAddTooltip": {
+        "message": "画面を明るくする",
+        "description": "Tool tip string of increase exposure button"
+    },
+    "expMinusTooltip": {
+        "message": "画面を暗くする",
+        "description": "Tool tip string of decrease exposure button"
+    },
+    "freezeTooltip": {
+        "message": "画面を静止させる",
+        "description": "Tool tip string of freeze button"
+    },
+    "focusTooltip": {
+        "message": "フォーカス/自動調整",
+        "description": "Tool tip string of focus button"
+    },
+    "resetTooltip": {
+        "message": "リセット",
+        "description": "Tool tip string of reset button"
+    },
+    "appsTooltip": {
+        "message": "OKIOCAM アプリケーション",
+        "description": "Tool tip string of apps button"
+    },
+    "appTimelapse": {
+        "message": "OKIOCAM<br>Time-Lapse",
+        "description": "OKIOCAM Time-Lapse name in apps menu"
+    },
+    "appStopmotion": {
+        "message": "OKIOCAM<br>Stop Motion",
+        "description": "OKIOCAM Stop Motion name in apps menu"
+    },
+    "appPIP": {
+        "message": "OKIOCAM<br>PIP",
+        "description": "OKIOCAM PIP name in apps menu"
+    },
+    "settingTooltip": {
+        "message": "設定",
+        "description": "Tool tip string of setting button"
+    },
+    "fullscreenTooltip": {
+        "message": "全画面",
+        "description": "Tool tip string of fullscreen button"
+    },
+    "snapshotTooltip": {
+        "message": "撮影",
+        "description": "Tool tip string of snapshot button"
+    },
+    "recordTooltip": {
+        "message": "録画",
+        "description": "Tool tip string of record button"
+    },
+    "recordStopTooltip": {
+        "message": "録画を停止する",
+        "description": "Tool tip string of stop record button"
+    },
+    "recordPauseTooltip": {
+        "message": "録画を一時停止する",
+        "description": "Tool tip string of pause record button"
+    },
+    "recordResumeTooltip": {
+        "message": "録画を再開する",
+        "description": "Tool tip string of resume record button"
+    },
+    "micTooltip": {
+        "message": "マイク音量",
+        "description": "Tool tip string of microphone display"
+    },
+    "uploadingText": {
+        "message": "Googleドライブにアップロードしています",
+        "description": "Text of uploading progress bar"
+    },
+    "reviewTooltip": {
+        "message": "写真・動画一覧",
+        "description": "Tool tip string of review mode button"
+    },
+    "freezeModeTooltip": {
+        "message": "画面静止モード",
+        "description": "Tool tip string of freeze mode icon"
+    },
+    "accountSetting": {
+        "message": "Googleアカウント",
+        "description": "Google account setting in setting page"
+    },
+    "accountSignin": {
+        "message": "Googleアカウントにログイン",
+        "description": "Sign in button in Google account setting"
+    },
+    "accountSignout": {
+        "message": "ログアウト",
+        "description": "Sign out button in Google account setting"
+    },
+    "librarySetting": {
+        "message": "データの保存先",
+        "description": "Library location setting in setting page"
+    },
+    "libraryGoogleDrive": {
+        "message": "Googleドライブ",
+        "description": "Library location in Google Drive"
+    },
+    "libraryRecommend": {
+        "message": "(おすすめ)",
+        "description": "Library location recommended"
+    },
+    "libraryGoogleDriveDesc": {
+        "message": "データをGoogleドライブにある \"OKIOCam Files\"に保存する。どの端末からでもアクセルできる。Google ClassroomやG Suiteとの共有も簡単。",
+        "description": "Library location in Google Drive description"
+    },
+    "libraryLocal": {
+        "message": "この端末",
+        "description": "Library location in Local filesystem"
+    },
+    "libraryLocalDesc": {
+        "message": "データをこの端末に保存する。注意: OKIOCAM Snapshot and Recorder、Google ChromeまたはGoogleアカウントが削除された場合、データも全部消されます。",
+        "description": "Library location in Local filesystem description"
+    },
+    "sourceSetting": {
+        "message": "一般設定",
+        "description": "Source setting in setting page"
+    },
+    "sourceSettingCamera": {
+        "message": "カメラ設定",
+        "description": "Camera in source setting"
+    },
+    "sourceSettingMic": {
+        "message": "マイク設定",
+        "description": "Microphone setting in source setting"
+    },
+    "snapshotSetting": {
+        "message": "撮影設定",
+        "description": "Snapshot setting in setting page"
+    },
+    "snapshotSettingResolution": {
+        "message": "解像度",
+        "description": "Resolution in snapshot setting"
+    },
+    "snapshotSettingFocusSound": {
+        "message": "電子音",
+        "description": "Focus Sound in snapshot setting"
+    },
+    "snapshotSettingFocusSoundOn": {
+        "message": "オン",
+        "description": "Focus Sound On option in snapshot setting"
+    },
+    "snapshotSettingFocusSoundOff": {
+        "message": "オフ",
+        "description": "Focus Sound Off option in snapshot setting"
+    },
+    "libraryFolder": {
+        "message": "データ保存先",
+        "description": "Library folder title in general setting"
+    },
+    "libraryFolderChangeBtn": {
+        "message": "変更",
+        "description": "Library folder change button text"
+    },
+    "langSetting": {
+        "message": "言語（Language）",
+        "description": "Language setting title in General setting"
+    },
+    "flickerSetting": {
+        "message": "ちらつき低減",
+        "description": "Flicker setting title in General settings"
+    },
+    "recordSetting": {
+        "message": "録画設定",
+        "description": "Record setting in setting page"
+    },
+    "recordSettingRatio": {
+        "message": "画面比率",
+        "description": "Ratio setting in Record setting"
+    },
+    "recordSettingQuality": {
+        "message": "クオリティ",
+        "description": "Quality setting in Record setting"
+    },
+    "recordSettingQualityLow": {
+        "message": "ロークオリティ",
+        "description": "Low quality text in Record setting"
+    },
+    "recordSettingQualityHigh": {
+        "message": "ハイクオリティ",
+        "description": "High quality text in Record setting"
+    },
+    "recordSettingQualityLow1": {
+        "message": "ロークオリティ (1024x768)",
+        "description": "Low quality setting in Record setting"
+    },
+    "recordSettingQualityHigh1": {
+        "message": "ハイクオリティ (1600x1200)",
+        "description": "High quality setting in Record setting"
+    },
+    "recordSettingQualityLow2": {
+        "message": "ロークオリティ (1280x720)",
+        "description": "Low quality setting in Record setting"
+    },
+    "recordSettingQualityHigh2": {
+        "message": "ハイクオリティ (1920x1080)",
+        "description": "High quality setting in Record setting"
+    },
+    "recordSettingMicVol": {
+        "message": "マイク音量",
+        "description": "Microphone volume setting in Record setting"
+    },
+    "recordSettingMicDisplay": {
+        "message": "録画中にマイク音量を画面に表示する",
+        "description": "Display microphone setting in Record setting"
+    },
+    "recordSettingNote": {
+        "message": "付注: 最長録画時間は一時間。",
+        "description": "Note in Record setting"
+    },
+    "buttonSetting": {
+        "message": "ボタン設定",
+        "description": "Button setting in setting page"
+    },
+    "buttonSettingDefault": {
+        "message": "(デフォルト)",
+        "description": "(default) string in Button setting"
+    },
+    "buttonSettingActivate": {
+        "message": "起動",
+        "description": "Activate action in Button setting"
+    },
+    "buttonSettingActivateDefault": {
+        "message": "起動 (デフォルト)",
+        "description": "Activate action with default in Button setting"
+    },
+    "buttonSettingZoom": {
+        "message": "ズーム",
+        "description": "Zoom action in Button setting"
+    },
+    "buttonSettingZoomDefault": {
+        "message": "ズーム (デフォルト)",
+        "description": "Zoom action with default in Button setting"
+    },
+    "buttonSettingZoomDesc": {
+        "message": "ズームをデフォルトの倍率と順番で行う",
+        "description": "Zoom description in Button setting"
+    },
+    "buttonSettingZoomCustom": {
+        "message": "ズームをお好みの設定で行う。",
+        "description": "Zoom customize description in Button setting"
+    },
+    "buttonSettingSnapshot": {
+        "message": "撮影",
+        "description": "Snapshot action in Button setting"
+    },
+    "buttonSettingSnapshotDefault": {
+        "message": "撮影 (デフォルト)",
+        "description": "Snapshot action with default in Button setting"
+    },
+    "buttonSettingSelfie": {
+        "message": "自撮りモード",
+        "description": "Selfie Mode action in Button setting"
+    },
+    "buttonSettingSelfieDefault": {
+        "message": "自撮りモード (デフォルト)",
+        "description": "Selfie Mode with default action in Button setting"
+    },
+    "buttonSettingURL": {
+        "message": "URLを開く",
+        "description": "Go to URL action in Button setting"
+    },
+    "buttonSettingURLDefault": {
+        "message": "URLを開く (デフォルト)",
+        "description": "Go to URL action with default in Button setting"
+    },
+    "buttonSettingKeyboard": {
+        "message": "ショートカットキー",
+        "description": "Keyboard Shortcuts link in Button setting"
+    },
+    "timerSetting": {
+        "message": "タイマーと画像確認",
+        "description": "Timer and Review setting in setting page"
+    },
+    "timerSettingShutter": {
+        "message": "セルフタイマー",
+        "description": "Shutter Timer in Timer and Review setting"
+    },
+    "timerSettingShutter0": {
+        "message": "0秒",
+        "description": "0 second Shutter Timer in Timer and Review setting"
+    },
+    "timerSettingShutter2": {
+        "message": "2秒",
+        "description": "2 seconds Shutter Timer in Timer and Review setting"
+    },
+    "timerSettingShutter5": {
+        "message": "5秒",
+        "description": "5 seconds Shutter Timer in Timer and Review setting"
+    },
+    "timerSettingReview": {
+        "message": "撮影直後の画像確認",
+        "description": "Post-Shot Review in Timer and Review setting"
+    },
+    "timerSettingReviewYes": {
+        "message": "オン",
+        "description": "Yes in Post-Shot Review setting"
+    },
+    "timerSettingReviewNo": {
+        "message": "オフ",
+        "description": "No in Post-Shot Review setting"
+    },
+    "quit": {
+        "message": "終了",
+        "description": "Quit OKIOCAM Snapshot and Recorder in setting page"
+    },
+    "firstSetup": {
+        "message": "初期設定",
+        "description": "First Time Setup in setting page"
+    },
+    "aboutUs": {
+        "message": "私たちについて",
+        "description": "About Us in setting page"
+    },
+    "help": {
+        "message": "ヘルプ",
+        "description": "Help in setting page"
+    },
+    "libraryGoogleDriveFirstDesc": {
+        "message": "データをGoogleドライブにある \"OKIOCam Files\"に保存する。どの端末からでもアクセルできる。Google ClassroomやG Suiteとの共有も簡単。",
+        "description": "Library location in Google Drive description in First Time Setup"
+    },
+    "libraryLocalFirstDesc": {
+        "message": "データをこの端末に保存する。注意: OKIOCAM Snapshot and Recorder、Google ChromeまたはGoogleアカウントが削除された場合、データも全部消されます。Chrome OSをご利用の方にはお勧めしません。",
+        "description": "Library location in Local filesystem description in First Time Setup"
+    },
+    "firstSetupStep3Title": {
+        "message": "完璧！",
+        "description": "Step 3 title in First Time Setup"
+    },
+    "firstSetupStep3Text": {
+        "message": "\\ 準備が整いました。始めましょう。 /",
+        "description": "Step 3 text in First Time Setup"
+    },
+    "firstSetupStep1Desc": {
+        "message": "Googleアカウントにログイン",
+        "description": "Step 1 description in First Time Setup"
+    },
+    "firstSetupBtnPrev": {
+        "message": "前のページ",
+        "description": "Previous button in First Time Setup"
+    },
+    "firstSetupBtnSkip": {
+        "message": "スキップ",
+        "description": "Skip button in First Time Setup"
+    },
+    "firstSetupBtnCancel": {
+        "message": "キャンセル",
+        "description": "Cancel button in First Time Setup"
+    },
+    "firstSetupBtnNext": {
+        "message": "次のページ",
+        "description": "Next button in First Time Setup"
+    },
+    "backLiveTooltip": {
+        "message": "ライブビュー画面に戻る",
+        "description": "Tooltip string of Back to Live button in Review Mode"
+    },
+    "backLiveBtn": {
+        "message": "戻る",
+        "description": "Back to Live button in Review Mode"
+    },
+    "backGridTooltip": {
+        "message": "写真・動画一覧に戻る",
+        "description": "Tooltip string of Back to Grid View button in Review Mode"
+    },
+    "uploadClassroomTooltip": {
+        "message": "Google Classroomにアップロードする",
+        "description": "Tooltip string of Upload to Google Classroom button in Review Mode"
+    },
+    "uploadDriveTooltip": {
+        "message": "Googleドライブにアップロードする",
+        "description": "Tooltip string of Upload to Google Drive button in Review Mode"
+    },
+    "gotoDriveTooltip": {
+        "message": "保存先フォルダを開く",
+        "description": "Tooltip string of Go to Google Drive folder button in Review Mode"
+    },
+    "downloadTooltip": {
+        "message": "選択されたデータをダウンロードする",
+        "description": "Tooltip string of Download Selected Files button in Review Mode"
+    },
+    "deleteTooltip": {
+        "message": "選択されたデータを消去する",
+        "description": "Tooltip string of Delete Selected Files button in Review Mode"
+    },
+    "menuDeleteAll": {
+        "message": "データを全部消去する",
+        "description": "Delete All menu item of more menu in Review Mode"
+    },
+    "menuNewTab": {
+        "message": "新しいタブで画像を開く",
+        "description": "Open in New Tab menu item of more menu in Review Mode"
+    },
+    "menuInfo": {
+        "message": "詳細",
+        "description": "Information menu item of more menu in Review Mode"
+    },
+    "noFile": {
+        "message": "データがありません",
+        "description": "No file message in Review Mode"
+    },
+    "menuDelete": {
+        "message": "消去",
+        "description": "Delete menu item of context menu in Review Mode"
+    },
+    "menuUpload": {
+        "message": "アップロード",
+        "description": "Upload menu item of context menu in Review Mode"
+    },
+    "menuDownload": {
+        "message": "ダウンロード",
+        "description": "Download menu item of context menu in Review Mode"
+    },
+    "prevFileTooltip": {
+        "message": "前のデータ",
+        "description": "Tooltip string of Previous file in Single file view in Review Mode"
+    },
+    "nextFileTooltip": {
+        "message": "次のデータ",
+        "description": "Tooltip string of Next file in Single file view in Review Mode"
+    },
+    "imgFullscreenTooltip": {
+        "message": "全画面",
+        "description": "Tooltip string of fullscreen button in Single file view in Review Mode"
+    },
+    "noFileSelectedTitle": {
+        "message": "警告",
+        "description": "Alert message title when no file selected and upload in Review Mode"
+    },
+    "noFileSelectedMsg": {
+        "message": "データを一つ以上選んでください。",
+        "description": "Alert message when no file selected and upload in Review Mode"
+    },
+    "className": {
+        "message": "クラス",
+        "description": "Class name title when uploading to Google Classroom in Review Mode"
+    },
+    "taskName": {
+        "message": "課題",
+        "description": "Task name title when uploading to Google Classroom in Review Mode"
+    },
+    "taskType1": {
+        "message": "宿題",
+        "description": "Task type assignment when uploading to Google Classroom in Review Mode"
+    },
+    "taskType2": {
+        "message": "短文クイズ",
+        "description": "Task type short answer question when uploading to Google Classroom in Review Mode"
+    },
+    "taskType3": {
+        "message": "選択問題",
+        "description": "Task type multiple answer question when uploading to Google Classroom in Review Mode"
+    },
+    "taskType4": {
+        "message": "お知らせ",
+        "description": "Task type announcement when uploading to Google Classroom in Review Mode"
+    },
+    "taskTitle": {
+        "message": "タイトル",
+        "description": "Title of the task when uploading to Google Classroom in Review Mode"
+    },
+    "taskMessage": {
+        "message": "メッセージ",
+        "description": "Message of the task when uploading to Google Classroom in Review Mode"
+    },
+    "taskDueDate": {
+        "message": "締切日",
+        "description": "Due Date of the task when uploading to Google Classroom in Review Mode"
+    },
+    "taskDueTime": {
+        "message": "締切時間",
+        "description": "Due Time of the task when uploading to Google Classroom in Review Mode"
+    },
+    "taskOption": {
+        "message": "選択肢",
+        "description": "Option of the multiple answer question task when uploading to Google Classroom in Review Mode"
+    },
+    "btnCancel": {
+        "message": "キャンセル",
+        "description": "Button cancel when uploading to Google Classroom in Review Mode"
+    },
+    "btnCreate": {
+        "message": "作成",
+        "description": "Button create when uploading to Google Classroom in Review Mode"
+    },
+    "uploadingClassText": {
+        "message": "Google Classroomにアップロードしています",
+        "description": "Text of uploading progress bar when uploading to Google Classroom"
+    },
+    "uploadingDone": {
+        "message": "完了",
+        "description": "% done of uploading progress bar"
+    },
+    "uploadingWarning": {
+        "message": "アップロードに必要な時間は通信速度、帯域幅やデータサイズにより異なります。",
+        "description": "Warning message of uploading progress bar"
+    },
+    "uploadClassDone": {
+        "message": "Google Classroomに配布しました！",
+        "description": "Upload finished message when uploading to Google Classroom"
+    },
+    "btnView": {
+        "message": "確認",
+        "description": "Button view when upload finished in Review Mode"
+    },
+    "btnOK": {
+        "message": "完了",
+        "description": "Button ok when upload finished in Review Mode"
+    },
+    "uploadDriveMyDrive": {
+        "message": "マイドライブ",
+        "description": "My Drive name in Google Drive"
+    },
+    "btnBack": {
+        "message": "戻る",
+        "description": "Back button in folder list when uploading to Google Drive"
+    },
+    "btnGoto": {
+        "message": "フォルダ",
+        "description": "Go to button in folder list when uploading to Google Drive"
+    },
+    "folderString": {
+        "message": "を開く",
+        "description": "Folder string in folder list when uploading to Google Drive"
+    },
+    "uploadDriveCreate": {
+        "message": "新規フォルダを作成",
+        "description": "Create a New Folder text when uploading to Google Drive in Review Mode"
+    },
+     "unnamedFolder": {
+         "message": "新しいフォルダ",
+         "description": "Default text of creating new folder when uploading to Google Drive in Review Mode"
+     },
+    "btnUpload": {
+        "message": "アップロード",
+        "description": "Button upload when uploading to Google Drive in Review Mode"
+    },
+    "uploadingDriveText": {
+        "message": "Googleドライブにアップロードしています",
+        "description": "Text of uploading progress bar when uploading to Google Drive"
+    },
+    "uploadDriveDone": {
+        "message": "データはGoogleドライブにアップロードされました",
+        "description": "Upload finished message when uploading to Google Drive"
+    },
+    "deleteAllTitle": {
+        "message": "消去",
+        "description": "Delete All alert dialog title"
+    },
+    "deleteAllContent": {
+        "message": "データをすべて消去しますか？ <br>消去されたデータは復元できません！",
+        "description": "Delete All alert dialog content"
+    },
+    "btnCancelDeleteAll": {
+        "message": "キャンセル",
+        "description": "Button cancel in delete all alert dialog"
+    },
+    "btnYesDeleteAll": {
+        "message": "消去",
+        "description": "Button yes in delete all alert dialog"
+    },
+    "firstSkipTitle": {
+        "message": "注意",
+        "description": "First time setup skip alert dialog title"
+    },
+    "firstSkipContent": {
+        "message": "Googleアカウントのログインをスキップすると、データは端末に保存されます。 OKIOCAM Snapshot and Recorder、Google ChromeまたはGoogleアカウントが削除された場合、データも全部消されます。Chrome OSをご利用の方にはお勧めしません。\"完了\"を選んで終了にするか、\"次へ\"を選んでGoogleアカウントにログインする。",
+        "description": "First time setup skip alert dialog content"
+    },
+    "btnContinue": {
+        "message": "次へ",
+        "description": "Button continue in First time setup skip all alert dialog"
+    },
+    "btnFinish": {
+        "message": "完了",
+        "description": "Button finish in First time setup skip all alert dialog"
+    },
+    "deleteAllDoneMsg": {
+        "message": "データを全部消去しました！",
+        "description": "Alert message when all files are deleted."
+    },
+    "singleFileDeleteDoneMsg": {
+        "message": "データを消去しました！",
+        "description": "Alert message when single file is deleted."
+    },
+    "filesDeleteDoneMsg": {
+        "message": "選択されたデータを消去しました！",
+        "description": "Alert message when selected files are deleted."
+    },
+    "errorMsg1": {
+        "message": "拡張機能を使うためにカメラのアクセス許可が必要です。",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "errorMsg2": {
+        "message": "OKIOCAMにアクセスできません。カメラの接続を確認し、他にOKIOCAMを使用しているアプリを終了してください。",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "errorMsg3": {
+        "message": "選んでいただいた解像度はサポートできません",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "errorMsg4": {
+        "message": "カメラが見つかりません",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "errorMsg5": {
+        "message": "OKIOCAMにアクセスできません。他にOKIOCAMを使用しているアプリを終了してください。",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "classMsg1": {
+        "message": "タイトルを入力してください！",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "classMsg2": {
+        "message": "メッセージを入力してください！",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "classMsg3": {
+        "message": "選択肢に内容を入力してください！",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "classMsg4": {
+        "message": "他の選択肢と重複しています！",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "classMsg5": {
+        "message": "作成できません",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "btnDriverMsg": {
+        "message": "OKIOCam Button Driverにコネクトできませんでした",
+        "description": "Alert message when can not connect to Button Driver"
+    },
+    "confirmQuit": {
+        "message": "OKIOCAM Snapshot and Recorderを終了しますか？",
+        "description": "Confirm message when quit"
+    },
+    "confirmDelLocal": {
+        "message": "データが消去されます。いいですか？",
+        "description": "Confirm message when delete single file from local disk"
+    },
+    "confirmDelDrive": {
+        "message": "データが端末とドライブから消去されます。いいですか？",
+        "description": "Confirm message when delete single file from Google Drive"
+    },
+    "confirmDelSelectLocal": {
+        "message": "選択されたデータが消去されます。いいですか？",
+        "description": "Confirm message when delete selected files from local disk"
+    },
+    "confirmDelSelectDrive": {
+        "message": "選択されたデータが端末とドライブから消去されます。いいですか？",
+        "description": "Confirm message when delete selected files from Google Drive"
+    },
+    "noStorageMsg": {
+        "message": "メモリが足りません。空き容量を開けてから録画を続けてください。",
+        "description": "Alert message when there is not enough storage for recording"
+    },
+    "confirmRecordShort": {
+        "message": "Chromeのメモリが足らないので、録画は一時間までできません。録画可能時間の目安は$LIMIT_LENGTH$分です。空き容量を開けたら一時間録画可能ですが、録画を始めますか？",
+        "description": "Confirm message when there is not enough storage to record 60 minutes",
+        "placeholders": {
+            "limit_length": {
+                "content": "$1",
+                "example": "10"
+            }
+        }
+    },
+    "settingNotSupportMsg": {
+        "message": "カメラは現在の録画設定をサポートできません。設定を変えてもう一度試してください。",
+        "description": "Alert message when the selected record setting is not supported by the camera"
+    },
+    "alertTitle": {
+        "message": "警告！",
+        "description": "Alert message title"
+    },
+    "alertButton": {
+        "message": "はい",
+        "description": "Alert message button text"
+    },
+    "confirmTitle": {
+        "message": "警告！",
+        "description": "Confirm message title"
+    },
+    "cssMore": {
+        "message": "展開",
+        "description": "More string in CSS"
+    },
+    "cssLess": {
+        "message": "折りたたむ",
+        "description": "Less string in CSS"
+    },
+    "cameraPageDesc": {
+        "message": "リマインダー：OKIOCAMはご利用者様のカメラとマイクをアクセスします。",
+        "description": "Message displayed in camera-mic page"
+    },
+    "cameraPageDone": {
+        "message": "このページを閉じて、OKIOCAM Snapshot and Recorderを再起動してください。",
+        "description": "Message displayed in camera-mic page when done"
+    },
+    "infoFilename": {
+        "message": "ファイル名：",
+        "description": "File Name field in file information"
+    },
+    "infoDuration": {
+        "message": "長さ：",
+        "description": "Duration field in file information"
+    },
+    "infoSecond": {
+        "message": "秒",
+        "description": "second in file information"
+    },
+    "infoResolution": {
+        "message": "解像度：",
+        "description": "Resolution field in file information"
+    },
+    "infoCreateDate": {
+        "message": "作成日時：",
+        "description": "Create Date field in file information"
+    },
+    "infoFilesize": {
+        "message": "サイズ：",
+        "description": "File Size field in file information"
+    },
+    "optionNone": {
+        "message": "なし",
+        "description": "Option None string in device list"
+    },
+    "noOKIOCAMMsg1": {
+        "message": "OKIOCAMが見つかりません。OKIOCAMを端末に取り付けてください。",
+        "description": "Message when detecting no OKIOCAM connected"
+    },
+    "noOKIOCAMMsg2": {
+        "message": "このアプリはOKIOCAMがなくてもご利用いただけますが、使える機能が限られております。",
+        "description": "Message when detecting no OKIOCAM connected"
+    },
+    "noOKIOCAMMsg3": {
+        "message": "OKIOCAMについて詳しく知りたい場合はwww.okiolabs.comまでお願いします。",
+        "description": "Message when detecting no OKIOCAM connected"
+    },
+    "changeFolderWarningMsg": {
+        "message": "保存先を変更したら既存データは新しい保存先へ転送されません。現在の保存先に残されたデータは写真・動画一覧モードに表示されません。それでも続けますか？",
+        "description": "Warning message when changing library folder"
+    },
+    "confirmBtnYes": {
+        "message": "はい",
+        "description": "Text on Yes button in confirm dialog"
+    },
+    "confirmBtnNo": {
+        "message": "いいえ",
+        "description": "Text on No button in confirm dialog"
+    },
+    "annotatorTooltip": {
+        "message": "注釈機能の有効化/無効化",
+        "description": "Tool tip string of annotator button"
+    },
+    "annotatorMenuTooltip": {
+        "message": "注釈メニュー",
+        "description": "Tool tip string of annotator menu button"
+    },
+    "eraseAllTooltip": {
+        "message": "全て削除",
+        "description": "Tool tip string of annotator erase all button"
+    },
+    "freehandTooltip": {
+        "message": "フリーハンド",
+        "description": "Tool tip string of annotator freehand button"
+    },
+    "lineTooltip": {
+        "message": "直線",
+        "description": "Tool tip string of annotator freehand button"
+    },
+    "arrowTooltip": {
+        "message": "矢印",
+        "description": "Tool tip string of annotator arrow button"
+    },
+    "rectangleTooltip": {
+        "message": "四角形",
+        "description": "Tool tip string of annotator rectangle button"
+    },
+    "ellipseTooltip": {
+        "message": "楕円",
+        "description": "Tool tip string of annotator ellipse button"
+    },
+    "eraserTooltip": {
+        "message": "消しゴム",
+        "description": "Tool tip string of annotator eraser button"
+    },
+    "undoTooltip": {
+        "message": "元に戻す",
+        "description": "Tool tip string of annotator undo button"
+    },
+    "redoTooltip": {
+        "message": "やり直す",
+        "description": "Tool tip string of annotator redo button"
+    },
+    "okiopointTooltip": {
+        "message": "OKIOPointの有効化/無効化",
+        "description": "Tool tip string of OKIOPoint"
+    },
+    "openLibraryTooltip": {
+        "message": "ライブラリフォルダーに移動",
+        "description": "Tool tip string of Go to Library"
+    },
+    "mainCamera": {
+        "message": "メインカメラ",
+        "description": "Text string of Main Camera in setting"
+    },
+    "cameraSource": {
+        "message": "ソース",
+        "description": "Text string in setting"
+    },
+    "secondaryCamera": {
+        "message": "セカンダリカメラ",
+        "description": "Text string of Secondary Camera in setting"
+    },
+    "pipPosition": {
+        "message": "位置",
+        "description": "Text string in setting"
+    },
+    "pipTopLeft": {
+        "message": "左上",
+        "description": "Position option"
+    },
+    "pipTopRight": {
+        "message": "右上",
+        "description": "Text string in setting"
+    },
+    "pipBottomLeft": {
+        "message": "左下",
+        "description": "Text string in setting"
+    },
+    "pipBottomRight": {
+        "message": "右下",
+        "description": "Text string in setting"
+    },
+    "pipCustomize": {
+        "message": "カスタマイズ",
+        "description": "Text string in setting"
+    },
+    "pipSize": {
+        "message": "サイズ",
+        "description": "Text string in setting"
+    },
+    "microphone": {
+        "message": "マイク",
+        "description": "Text string in setting"
+    },
+    "recordResolution": {
+        "message": "録画解像度",
+        "description": "Text string in setting"
+    },
+    "recordResolutionTooltip": {
+        "message": "録画解像度は自動的にメインカメラの解像度に合わせて変更されます。",
+        "description": "Tool tip string of Recording Resolution"
+    },
+    "enableTxt": {
+        "message": "有効化",
+        "description": "Text string of enable function"
+    },
+    "disableTxt": {
+        "message": "無効化",
+        "description": "Text string of disable function"
+    },
+    "panSpeedTxt": {
+        "message": "パンスピード",
+        "description": "Text string of pan speed function"
+    },
+    "okiopointOption1": {
+        "message": "ズームとフォロー",
+        "description": "Option 1 of OKIOPoint function"
+    },
+    "okiopointOption2": {
+        "message": "ハイライト",
+        "description": "Option 2 of OKIOPoint function"
+    },
+    "okiopointOption3": {
+        "message": "蛍光ペン",
+        "description": "Option 3 of OKIOPoint function"
+    },
+    "okiopointOption4": {
+        "message": "下線",
+        "description": "Option 4 of OKIOPoint function"
+    },
+    "okiopointOption5": {
+        "message": "スポットライト",
+        "description": "Option 5 of OKIOPoint function"
+    },
+    "optionSize1": {
+        "message": "大",
+        "description": "Size option 1"
+    },
+    "optionSize2": {
+        "message": "中",
+        "description": "Size option 2"
+    },
+    "optionSize3": {
+        "message": "小",
+        "description": "Size option 3"
+    },
+    "optionSize4": {
+        "message": "ミニ",
+        "description": "Size option 4"
+    },
+    "resetDefault": {
+        "message": "デフォルトにリセット",
+        "description": "Tool tip string of reset to default button"
+    },
+    "swapCameras": {
+        "message": "カメラの入れ替え",
+        "description": "Tool tip string of swap cameras button"
+    },
+    "okiopointWarningMsg1": {
+        "message": "OKIOCAM Liveは、ZoomモードとFollowモードでのみ録画できるか、またはOKIOPointを無効にして録画できます。録画を進める場合、OKIOPointは自動的に無効にされます。続けますか？",
+        "description": "Warning message for recording with OKIOPoint"
+    },
+    "okiopointWarningMsg2": {
+        "message": "OKIOPointはOKIOLABSカメラのみをサポートしています。詳細については、当社のウェブサイトwww.okiolabs.comをご覧ください。",
+        "description": "Warning message for OKIOPoint"
+    },
+    "okiocamWarningMsg": {
+        "message": "OKIOCAMがPCに接続されていないことがわかりました。OKIOCAMを接続してください。OKIOCAMと一緒にこのアプリケーションを使用すると、最高のユーザーエクスペリエンスを提供します。OKIOCAMについて詳しく知りたい場合は、www.okiolabs.comを訪問してください。",
+        "description": "Warning message for no OKIOCAM"
+    }
+}

@@ -1,0 +1,1040 @@
+{
+    "appName": {
+        "message": "OKIOCAM Live",
+        "description": "The title of the application, displayed in the web store."
+    },
+    "appDesc": {
+        "message": "適合現場展示的完美應用程式。在較大的螢幕上顯示相機的影像，或透過視訊會議軟體分享它。",
+        "description": "The description of the application, displayed in the web store."
+    },
+    "appNameLive": {
+        "message": "OKIOCAM Live | Live Mode",
+        "description": "The title of the application in Live Mode"
+    },
+    "liveMode": {
+        "message": "即時畫面模式",
+        "description": "Live Mode in title"
+    },
+    "reviewMode": {
+        "message": "檢視模式",
+        "description": "Review Mode in title"
+    },
+    "recordWarningTitle": {
+        "message": "繼續錄影嗎?",
+        "description": "Warning message title when recording"
+    },
+    "recordWarningMsg": {
+        "message": "<span class=\"ui-icon ui-icon-alert\"></span>OKIOCAM Live 只能在「放大並追蹤」模式下，或是 OKIOPoint 功能取消時錄影。如果選擇繼續錄影的話，OKIOPoint 功能會自動取消。是否要繼續錄影?",
+        "description": "Warning message when recording"
+    },
+    "recordWarningMsg2": {
+        "message": "<span class=\"ui-icon ui-icon-alert\"></span>以目前的解析度錄影，根據硬體效能的不同，有可能會產生影像延遲的影片。如果不滿意錄影的結果，可以嘗試選擇較低的解析度。是否要繼續錄影？",
+        "description": "Warning message when recording"
+    },
+    "recordNotSupportWarningMsg": {
+        "message": "目前所選擇的解析度無法支援錄影，請選擇較低的解析度",
+        "description": "Warning message when selected resolution not support record"
+    },
+    "menuTooltip": {
+        "message": "選單",
+        "description": "Tool tip string of menu button"
+    },
+    "selfieTooltip": {
+        "message": "自拍模式",
+        "description": "Tool tip string of selfie button"
+    },
+    "mirrorTooltip": {
+        "message": "左右顛倒",
+        "description": "Tool tip string of mirror button"
+    },
+    "zoomTooltip": {
+        "message": "縮放",
+        "description": "Tool tip string of zoom menu"
+    },
+    "zoomInTooltip": {
+        "message": "放大",
+        "description": "Tool tip string of zoom in button"
+    },
+    "zoomOutTooltip": {
+        "message": "縮小",
+        "description": "Tool tip string of zoom out button"
+    },
+    "rotateTooltip": {
+        "message": "旋轉",
+        "description": "Tool tip string of rotate menu"
+    },
+    "rotateLeftTooltip": {
+        "message": "順時針旋轉",
+        "description": "Tool tip string of rotate clockwise button"
+    },
+    "rotateRightTooltip": {
+        "message": "逆時針旋轉",
+        "description": "Tool tip string of rotate counterclockwise button"
+    },
+    "expTooltip": {
+        "message": "曝光",
+        "description": "Tool tip string of exposure menu"
+    },
+    "expAddTooltip": {
+        "message": "增加曝光值",
+        "description": "Tool tip string of increase exposure button"
+    },
+    "expMinusTooltip": {
+        "message": "減少曝光值",
+        "description": "Tool tip string of decrease exposure button"
+    },
+    "freezeTooltip": {
+        "message": "畫面靜止",
+        "description": "Tool tip string of freeze button"
+    },
+    "focusTooltip": {
+        "message": "對焦 / 自動調整",
+        "description": "Tool tip string of focus button"
+    },
+    "resetTooltip": {
+        "message": "重置",
+        "description": "Tool tip string of reset button"
+    },
+    "appsTooltip": {
+        "message": "OKIOCAM 應用程式",
+        "description": "Tool tip string of apps button"
+    },
+    "appTimelapse": {
+        "message": "OKIOCAM<br>Time-Lapse",
+        "description": "OKIOCAM Time-Lapse name in apps menu"
+    },
+    "appStopmotion": {
+        "message": "OKIOCAM<br>Stop Motion",
+        "description": "OKIOCAM Stop Motion name in apps menu"
+    },
+    "appPIP": {
+        "message": "OKIOCAM<br>PIP",
+        "description": "OKIOCAM PIP name in apps menu"
+    },
+    "settingTooltip": {
+        "message": "設定",
+        "description": "Tool tip string of setting button"
+    },
+    "fullscreenTooltip": {
+        "message": "全螢幕切換",
+        "description": "Tool tip string of fullscreen button"
+    },
+    "snapshotTooltip": {
+        "message": "拍照",
+        "description": "Tool tip string of snapshot button"
+    },
+    "recordTooltip": {
+        "message": "錄影",
+        "description": "Tool tip string of record button"
+    },
+    "recordStopTooltip": {
+        "message": "停止錄影",
+        "description": "Tool tip string of stop record button"
+    },
+    "recordPauseTooltip": {
+        "message": "暫停錄影",
+        "description": "Tool tip string of pause record button"
+    },
+    "recordResumeTooltip": {
+        "message": "繼續錄影",
+        "description": "Tool tip string of resume record button"
+    },
+    "micTooltip": {
+        "message": "麥克風音量",
+        "description": "Tool tip string of microphone display"
+    },
+    "uploadingText": {
+        "message": "正在上傳到 Google 雲端硬碟",
+        "description": "Text of uploading progress bar"
+    },
+    "reviewTooltip": {
+        "message": "進入檢視模式",
+        "description": "Tool tip string of review mode button"
+    },
+    "freezeModeTooltip": {
+        "message": "暫停畫面模式開啟",
+        "description": "Tool tip string of freeze mode icon"
+    },
+    "accountSetting": {
+        "message": "Google 帳號",
+        "description": "Google account setting in setting page"
+    },
+    "accountSignin": {
+        "message": "登入 Google 帳號",
+        "description": "Sign in button in Google account setting"
+    },
+    "accountSignout": {
+        "message": "登出",
+        "description": "Sign out button in Google account setting"
+    },
+    "librarySetting": {
+        "message": "檔案儲存位置",
+        "description": "Library location setting in setting page"
+    },
+    "libraryGoogleDrive": {
+        "message": "Google 雲端硬碟",
+        "description": "Library location in Google Drive"
+    },
+    "libraryRecommend": {
+        "message": "(建議)",
+        "description": "Library location recommended"
+    },
+    "libraryGoogleDriveDesc": {
+        "message": "將檔案儲存在你的 Google 雲端硬碟的 \"OKIOCam Files\" 目錄中。可以從任何裝置存取檔案，簡單快速與 Google Classroom 和 G Suite 整合。",
+        "description": "Library location in Google Drive description"
+    },
+    "libraryLocal": {
+        "message": "在本地裝置上",
+        "description": "Library location in Local filesystem"
+    },
+    "libraryLocalDesc": {
+        "message": "將檔案儲存在你的電腦中。注意：如果你移除 OKIOCAM Snapshot and Recorder、Chrome 瀏覽器或者是您的 Chrome 使用者帳號，所有的檔案都會被刪除。",
+        "description": "Library location in Local filesystem description"
+    },
+    "sourceSetting": {
+        "message": "一般設定",
+        "description": "Source setting in setting page"
+    },
+    "sourceSettingCamera": {
+        "message": "攝影機",
+        "description": "Camera in source setting"
+    },
+    "sourceSettingMic": {
+        "message": "錄音麥克風",
+        "description": "Microphone setting in source setting"
+    },
+    "snapshotSetting": {
+        "message": "拍照設定",
+        "description": "Snapshot setting in setting page"
+    },
+    "snapshotSettingResolution": {
+        "message": "解析度",
+        "description": "Resolution in snapshot setting"
+    },
+    "snapshotSettingFocusSound": {
+        "message": "對焦提示音",
+        "description": "Focus Sound in snapshot setting"
+    },
+    "snapshotSettingFocusSoundOn": {
+        "message": "開啟",
+        "description": "Focus Sound On option in snapshot setting"
+    },
+    "snapshotSettingFocusSoundOff": {
+        "message": "關閉",
+        "description": "Focus Sound Off option in snapshot setting"
+    },
+    "libraryFolder": {
+        "message": "媒體庫目錄",
+        "description": "Library folder title in general setting"
+    },
+    "libraryFolderChangeBtn": {
+        "message": "變更",
+        "description": "Library folder change button text"
+    },
+    "langSetting": {
+        "message": "語言 (Language)",
+        "description": "Language setting title in General setting"
+    },
+    "flickerSetting": {
+        "message": "防閃爍",
+        "description": "Flicker setting title in General settings"
+    },
+    "recordSetting": {
+        "message": "錄影設定",
+        "description": "Record setting in setting page"
+    },
+    "recordSettingRatio": {
+        "message": "畫面比例",
+        "description": "Ratio setting in Record setting"
+    },
+    "recordSettingQuality": {
+        "message": "影像品質",
+        "description": "Quality setting in Record setting"
+    },
+    "recordSettingQualityLow": {
+        "message": "標準",
+        "description": "Low quality text in Record setting"
+    },
+    "recordSettingQualityHigh": {
+        "message": "高",
+        "description": "High quality text in Record setting"
+    },
+    "recordSettingQualityLow1": {
+        "message": "標準 (1024x768)",
+        "description": "Low quality setting in Record setting"
+    },
+    "recordSettingQualityHigh1": {
+        "message": "高 (1600x1200)",
+        "description": "High quality setting in Record setting"
+    },
+    "recordSettingQualityLow2": {
+        "message": "標準 (1280x720)",
+        "description": "Low quality setting in Record setting"
+    },
+    "recordSettingQualityHigh2": {
+        "message": "高 (1920x1080)",
+        "description": "High quality setting in Record setting"
+    },
+    "recordSettingMicVol": {
+        "message": "麥克風音量",
+        "description": "Microphone volume setting in Record setting"
+    },
+    "recordSettingMicDisplay": {
+        "message": "錄影時顯示麥克風音量",
+        "description": "Display microphone setting in Record setting"
+    },
+    "recordSettingNote": {
+        "message": "註: 最長錄影時間為 60 分鐘。",
+        "description": "Note in Record setting"
+    },
+    "buttonSetting": {
+        "message": "按鍵設定",
+        "description": "Button setting in setting page"
+    },
+    "buttonSettingDefault": {
+        "message": "(預設)",
+        "description": "(default) string in Button setting"
+    },
+    "buttonSettingActivate": {
+        "message": "啟動",
+        "description": "Activate action in Button setting"
+    },
+    "buttonSettingActivateDefault": {
+        "message": "啟動 (預設)",
+        "description": "Activate action with default in Button setting"
+    },
+    "buttonSettingZoom": {
+        "message": "縮放",
+        "description": "Zoom action in Button setting"
+    },
+    "buttonSettingZoomDefault": {
+        "message": "縮放 (預設)",
+        "description": "Zoom action with default in Button setting"
+    },
+    "buttonSettingZoomDesc": {
+        "message": "按此按鍵依序切換縮放比例。",
+        "description": "Zoom description in Button setting"
+    },
+    "buttonSettingZoomCustom": {
+        "message": "可自行設定縮放比例。",
+        "description": "Zoom customize description in Button setting"
+    },
+    "buttonSettingSnapshot": {
+        "message": "拍照",
+        "description": "Snapshot action in Button setting"
+    },
+    "buttonSettingSnapshotDefault": {
+        "message": "拍照 (預設)",
+        "description": "Snapshot action with default in Button setting"
+    },
+    "buttonSettingSelfie": {
+        "message": "自拍模式",
+        "description": "Selfie Mode action in Button setting"
+    },
+    "buttonSettingSelfieDefault": {
+        "message": "自拍模式 (預設)",
+        "description": "Selfie Mode with default action in Button setting"
+    },
+    "buttonSettingURL": {
+        "message": "開啟連結",
+        "description": "Go to URL action in Button setting"
+    },
+    "buttonSettingURLDefault": {
+        "message": "開啟連結 (預設)",
+        "description": "Go to URL action with default in Button setting"
+    },
+    "buttonSettingKeyboard": {
+        "message": "鍵盤快捷鍵",
+        "description": "Keyboard Shortcuts link in Button setting"
+    },
+    "timerSetting": {
+        "message": "計時器及檢視",
+        "description": "Timer and Review setting in setting page"
+    },
+    "timerSettingShutter": {
+        "message": "快門計時器",
+        "description": "Shutter Timer in Timer and Review setting"
+    },
+    "timerSettingShutter0": {
+        "message": "0 秒",
+        "description": "0 second Shutter Timer in Timer and Review setting"
+    },
+    "timerSettingShutter2": {
+        "message": "2 秒",
+        "description": "2 seconds Shutter Timer in Timer and Review setting"
+    },
+    "timerSettingShutter5": {
+        "message": "5 秒",
+        "description": "5 seconds Shutter Timer in Timer and Review setting"
+    },
+    "timerSettingReview": {
+        "message": "拍照後立即檢視",
+        "description": "Post-Shot Review in Timer and Review setting"
+    },
+    "timerSettingReviewYes": {
+        "message": "是",
+        "description": "Yes in Post-Shot Review setting"
+    },
+    "timerSettingReviewNo": {
+        "message": "否",
+        "description": "No in Post-Shot Review setting"
+    },
+    "quit": {
+        "message": "關閉",
+        "description": "Quit OKIOCAM Snapshot and Recorder in setting page"
+    },
+    "firstSetup": {
+        "message": "第一次執行設定",
+        "description": "First Time Setup in setting page"
+    },
+    "aboutUs": {
+        "message": "關於我們",
+        "description": "About Us in setting page"
+    },
+    "help": {
+        "message": "說明",
+        "description": "Help in setting page"
+    },
+    "libraryGoogleDriveFirstDesc": {
+        "message": "將快照或影片儲存在 Google 雲端硬碟的 \"OKIOCam Files\" 目錄下。可以從任何裝置存取檔案，簡單快速與 Google Classroom 和 G Suite 整合。",
+        "description": "Library location in Google Drive description in First Time Setup"
+    },
+    "libraryLocalFirstDesc": {
+        "message": "將快照或影片儲存在你的電腦中。注意：如果你移除 OKIOCAM Snapshot and Recorder、Chrome 瀏覽器或者是您的 Chrome 使用者帳號，你所建立的檔案都會被刪除。不建議在 Chrome OS 上使用。",
+        "description": "Library location in Local filesystem description in First Time Setup"
+    },
+    "firstSetupStep3Title": {
+        "message": "太棒了 !",
+        "description": "Step 3 title in First Time Setup"
+    },
+    "firstSetupStep3Text": {
+        "message": "\\ 你已經準備好了。 開始使用吧 /",
+        "description": "Step 3 text in First Time Setup"
+    },
+    "firstSetupStep1Desc": {
+        "message": "登入 Google 帳號",
+        "description": "Step 1 description in First Time Setup"
+    },
+    "firstSetupBtnPrev": {
+        "message": "前一頁",
+        "description": "Previous button in First Time Setup"
+    },
+    "firstSetupBtnSkip": {
+        "message": "跳過",
+        "description": "Skip button in First Time Setup"
+    },
+    "firstSetupBtnCancel": {
+        "message": "取消",
+        "description": "Cancel button in First Time Setup"
+    },
+    "firstSetupBtnNext": {
+        "message": "下一頁",
+        "description": "Next button in First Time Setup"
+    },
+    "backLiveTooltip": {
+        "message": "回到即時畫面",
+        "description": "Tooltip string of Back to Live button in Review Mode"
+    },
+    "backLiveBtn": {
+        "message": "返回",
+        "description": "Back to Live button in Review Mode"
+    },
+    "backGridTooltip": {
+        "message": "回到格狀檢視",
+        "description": "Tooltip string of Back to Grid View button in Review Mode"
+    },
+    "uploadClassroomTooltip": {
+        "message": "上傳到 Google Classroom",
+        "description": "Tooltip string of Upload to Google Classroom button in Review Mode"
+    },
+    "uploadDriveTooltip": {
+        "message": "上傳到 Google 雲端硬碟",
+        "description": "Tooltip string of Upload to Google Drive button in Review Mode"
+    },
+    "gotoDriveTooltip": {
+        "message": "前往媒體所在的目錄",
+        "description": "Tooltip string of Go to library folder button in Review Mode"
+    },
+    "downloadTooltip": {
+        "message": "下載選擇的檔案",
+        "description": "Tooltip string of Download Selected Files button in Review Mode"
+    },
+    "deleteTooltip": {
+        "message": "刪除選擇的檔案",
+        "description": "Tooltip string of Delete Selected Files button in Review Mode"
+    },
+    "menuDeleteAll": {
+        "message": "刪除全部",
+        "description": "Delete All menu item of more menu in Review Mode"
+    },
+    "menuNewTab": {
+        "message": "在新分頁開啟",
+        "description": "Open in New Tab menu item of more menu in Review Mode"
+    },
+    "menuInfo": {
+        "message": "資訊",
+        "description": "Information menu item of more menu in Review Mode"
+    },
+    "noFile": {
+        "message": "沒有檔案",
+        "description": "No file message in Review Mode"
+    },
+    "menuDelete": {
+        "message": "刪除",
+        "description": "Delete menu item of context menu in Review Mode"
+    },
+    "menuUpload": {
+        "message": "上傳",
+        "description": "Upload menu item of context menu in Review Mode"
+    },
+    "menuDownload": {
+        "message": "下載",
+        "description": "Download menu item of context menu in Review Mode"
+    },
+    "prevFileTooltip": {
+        "message": "上一個檔案",
+        "description": "Tooltip string of Previous file in Single file view in Review Mode"
+    },
+    "nextFileTooltip": {
+        "message": "下一個檔案",
+        "description": "Tooltip string of Next file in Single file view in Review Mode"
+    },
+    "imgFullscreenTooltip": {
+        "message": "全螢幕",
+        "description": "Tooltip string of fullscreen button in Single file view in Review Mode"
+    },
+    "noFileSelectedTitle": {
+        "message": "警告",
+        "description": "Alert message title when no file selected and upload in Review Mode"
+    },
+    "noFileSelectedMsg": {
+        "message": "你需要選擇至少一個檔案。",
+        "description": "Alert message when no file selected and upload in Review Mode"
+    },
+    "className": {
+        "message": "課程",
+        "description": "Class name title when uploading to Google Classroom in Review Mode"
+    },
+    "taskName": {
+        "message": "類型",
+        "description": "Task name title when uploading to Google Classroom in Review Mode"
+    },
+    "taskType1": {
+        "message": "作業",
+        "description": "Task type assignment when uploading to Google Classroom in Review Mode"
+    },
+    "taskType2": {
+        "message": "簡答問題",
+        "description": "Task type short answer question when uploading to Google Classroom in Review Mode"
+    },
+    "taskType3": {
+        "message": "選擇題問題",
+        "description": "Task type multiple answer question when uploading to Google Classroom in Review Mode"
+    },
+    "taskType4": {
+        "message": "公告",
+        "description": "Task type announcement when uploading to Google Classroom in Review Mode"
+    },
+    "taskTitle": {
+        "message": "標題",
+        "description": "Title of the task when uploading to Google Classroom in Review Mode"
+    },
+    "taskMessage": {
+        "message": "說明",
+        "description": "Message of the task when uploading to Google Classroom in Review Mode"
+    },
+    "taskDueDate": {
+        "message": "截止日期",
+        "description": "Due Date of the task when uploading to Google Classroom in Review Mode"
+    },
+    "taskDueTime": {
+        "message": "截止時間",
+        "description": "Due Time of the task when uploading to Google Classroom in Review Mode"
+    },
+    "taskOption": {
+        "message": "選項",
+        "description": "Option of the multiple answer question task when uploading to Google Classroom in Review Mode"
+    },
+    "btnCancel": {
+        "message": "取消",
+        "description": "Button cancel when uploading to Google Classroom in Review Mode"
+    },
+    "btnCreate": {
+        "message": "建立",
+        "description": "Button create when uploading to Google Classroom in Review Mode"
+    },
+    "uploadingClassText": {
+        "message": "正在上傳到 Google Classroom",
+        "description": "Text of uploading progress bar when uploading to Google Classroom"
+    },
+    "uploadingDone": {
+        "message": "完成",
+        "description": "% done of uploading progress bar"
+    },
+    "uploadingWarning": {
+        "message": "上傳速度會因為你的網路連線速度、可使用頻寬以及檔案大小而不同。",
+        "description": "Warning message of uploading progress bar"
+    },
+    "uploadClassDone": {
+        "message": "已發佈到 Google Classroom!",
+        "description": "Upload finished message when uploading to Google Classroom"
+    },
+    "btnView": {
+        "message": "檢視",
+        "description": "Button view when upload finished in Review Mode"
+    },
+    "btnOK": {
+        "message": "完成",
+        "description": "Button ok when upload finished in Review Mode"
+    },
+    "uploadDriveMyDrive": {
+        "message": "我的雲端硬碟",
+        "description": "My Drive name in Google Drive"
+    },
+    "btnBack": {
+        "message": "返回",
+        "description": "Back button in folder list when uploading to Google Drive"
+    },
+    "btnGoto": {
+        "message": "前往",
+        "description": "Go to button in folder list when uploading to Google Drive"
+    },
+    "folderString": {
+        "message": "資料夾",
+        "description": "Folder string in folder list when uploading to Google Drive"
+    },
+    "uploadDriveCreate": {
+        "message": "建立新資料夾",
+        "description": "Create a New Folder text when uploading to Google Drive in Review Mode"
+    },
+     "unnamedFolder": {
+         "message": "未命名資料夾",
+         "description": "Default text of creating new folder when uploading to Google Drive in Review Mode"
+     },
+    "btnUpload": {
+        "message": "上傳",
+        "description": "Button upload when uploading to Google Drive in Review Mode"
+    },
+    "uploadingDriveText": {
+        "message": "正在上傳到 Google 雲端硬碟",
+        "description": "Text of uploading progress bar when uploading to Google Drive"
+    },
+    "uploadDriveDone": {
+        "message": "檔案已上傳到 Google 雲端硬碟",
+        "description": "Upload finished message when uploading to Google Drive"
+    },
+    "deleteAllTitle": {
+        "message": "刪除",
+        "description": "Delete All alert dialog title"
+    },
+    "deleteAllContent": {
+        "message": "你確定要刪除所有的檔案嗎? <br> 刪除後無法復原!",
+        "description": "Delete All alert dialog content"
+    },
+    "btnCancelDeleteAll": {
+        "message": "取消",
+        "description": "Button cancel in delete all alert dialog"
+    },
+    "btnYesDeleteAll": {
+        "message": "全部刪除",
+        "description": "Button yes in delete all alert dialog"
+    },
+    "firstSkipTitle": {
+        "message": "注意",
+        "description": "First time setup skip alert dialog title"
+    },
+    "firstSkipContent": {
+        "message": "如果跳過 Google 帳號登入，檔案會儲存在本地端。當你移除 OKIOCAM Snapshot and Recorder、Chrome 瀏覽器或者是你的 Chrome 使用者帳號時，檔案也會被刪除。不建議在 Chrome OS 上使用。選擇\"完成\"離開，或選擇\"繼續\"登入 Google 帳號。",
+        "description": "First time setup skip alert dialog content"
+    },
+    "btnContinue": {
+        "message": "繼續",
+        "description": "Button continue in First time setup skip all alert dialog"
+    },
+    "btnFinish": {
+        "message": "完成",
+        "description": "Button finish in First time setup skip all alert dialog"
+    },
+    "deleteAllDoneMsg": {
+        "message": "所有的檔案已刪除!",
+        "description": "Alert message when all files are deleted."
+    },
+    "singleFileDeleteDoneMsg": {
+        "message": "檔案已刪除!",
+        "description": "Alert message when single file is deleted."
+    },
+    "filesDeleteDoneMsg": {
+        "message": "所有選擇的檔案已刪除!",
+        "description": "Alert message when selected files are deleted."
+    },
+    "errorMsg1": {
+        "message": "你必須允許攝影機使用權限才能使用此擴充功能",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "errorMsg2": {
+        "message": "無法存取 OKIOCAM。請確定攝影機已經連接，並且關閉其他正在使用 OKIOCAM 的程式。",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "errorMsg3": {
+        "message": "無法支援你所選擇的解析度",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "errorMsg4": {
+        "message": "沒有攝影機裝置",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "errorMsg5": {
+        "message": "無法存取 OKIOCAM。請確認沒有其他應用程式正在使用它。",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "classMsg1": {
+        "message": "標題為必填欄位!",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "classMsg2": {
+        "message": "說明為必填欄位!",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "classMsg3": {
+        "message": "選項不能為空白!",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "classMsg4": {
+        "message": "選項不能重複!",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "classMsg5": {
+        "message": "無法建立",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "btnDriverMsg": {
+        "message": "無法連接到 OKIOCam Button Driver",
+        "description": "Alert message when can not connect to Button Driver"
+    },
+    "confirmQuit": {
+        "message": "要結束 OKIOCAM Snapshot and Recorder 嗎?",
+        "description": "Confirm message when quit"
+    },
+    "confirmDelLocal": {
+        "message": "目前檔案將會被刪除。你確定嗎?",
+        "description": "Confirm message when delete single file from local disk"
+    },
+    "confirmDelDrive": {
+        "message": "目前檔案將會從裝置中以及你的雲端硬碟中刪除。你確定嗎?",
+        "description": "Confirm message when delete single file from Google Drive"
+    },
+    "confirmDelSelectLocal": {
+        "message": "所有選擇的檔案將會被刪除。你確定嗎?",
+        "description": "Confirm message when delete selected files from local disk"
+    },
+    "confirmDelSelectDrive": {
+        "message": "所有選擇的檔案將會從裝置中以及你的雲端硬碟中刪除。你確定嗎?",
+        "description": "Confirm message when delete selected files from Google Drive"
+    },
+    "noStorageMsg": {
+        "message": "儲存空間不足無法錄影，請刪除一些檔案。",
+        "description": "Alert message when there is not enough storage for recording"
+    },
+    "confirmRecordShort": {
+        "message": "Chrome 儲存空間不足無法錄影到 60 分鐘。預估的錄影長度為 $LIMIT_LENGTH$ 分鐘。請刪除一些檔案才能夠錄到 60 分鐘。是否要繼續錄影?",
+        "description": "Confirm message when there is not enough storage to record 60 minutes",
+        "placeholders": {
+            "limit_length": {
+                "content": "$1",
+                "example": "10"
+            }
+        }
+    },
+    "settingNotSupportMsg": {
+        "message": "無法支援所選擇的錄影設定",
+        "description": "Alert message when the selected record setting is not supported by the camera"
+    },
+    "alertTitle": {
+        "message": "注意!",
+        "description": "Alert message title"
+    },
+    "alertButton": {
+        "message": "好",
+        "description": "Alert message button text"
+    },
+    "confirmTitle": {
+        "message": "警告!",
+        "description": "Confirm message title"
+    },
+    "cssMore": {
+        "message": "更多",
+        "description": "More string in CSS"
+    },
+    "cssLess": {
+        "message": "更少",
+        "description": "Less string in CSS"
+    },
+    "cameraPageDesc": {
+        "message": "此頁面為提醒使用者OKIOCAM將存取您的攝影機及麥克風。",
+        "description": "Message displayed in camera-mic page"
+    },
+    "cameraPageDone": {
+        "message": "現在你可以關閉此頁面並重新開啟 OKIOCAM Snapshot and Recorder",
+        "description": "Message displayed in camera-mic page when done"
+    },
+    "infoFilename": {
+        "message": "檔案名稱:",
+        "description": "File Name field in file information"
+    },
+    "infoDuration": {
+        "message": "長度:",
+        "description": "Duration field in file information"
+    },
+    "infoSecond": {
+        "message": "秒",
+        "description": "second in file information"
+    },
+    "infoResolution": {
+        "message": "解析度:",
+        "description": "Resolution field in file information"
+    },
+    "infoCreateDate": {
+        "message": "建立日期:",
+        "description": "Create Date field in file information"
+    },
+    "infoFilesize": {
+        "message": "檔案大小:",
+        "description": "File Size field in file information"
+    },
+    "optionNone": {
+        "message": "無",
+        "description": "Option None string in device list"
+    },
+    "noOKIOCAMMsg1": {
+        "message": "我們沒有偵測到 OKIOCAM 連接在電腦上。請現在將 OKIOCAM 接上。",
+        "description": "Message when detecting no OKIOCAM connected"
+    },
+    "noOKIOCAMMsg2": {
+        "message": "如果你沒有 OKIOCAM 的話，仍然能使用此程式，但是將無法使用所有的功能。",
+        "description": "Message when detecting no OKIOCAM connected"
+    },
+    "noOKIOCAMMsg3": {
+        "message": "想要更了解 OKIOCAM 的話，請拜訪網址 www.okiolabs.com",
+        "description": "Message when detecting no OKIOCAM connected"
+    },
+    "changeFolderWarningMsg": {
+        "message": "如果變更媒體庫目錄的話，現有的檔案不會<br>轉移到新的目錄。原有目錄中的檔案將不會<br>顯示在檢視模式。<br><br>是否要繼續？",
+        "description": "Warning message when changing library folder"
+    },
+    "confirmBtnYes": {
+        "message": "是",
+        "description": "Text on Yes button in confirm dialog"
+    },
+    "confirmBtnNo": {
+        "message": "否",
+        "description": "Text on No button in confirm dialog"
+    },
+    "annotateClear": {
+        "message": "清除",
+        "description": "Text on clear button in annotate menu"
+    },
+    "annotatorTooltip": {
+        "message": "Annotator 啟動/取消",
+        "description": "Tool tip string of annotator button"
+    },
+    "annotatorMenuTooltip": {
+        "message": "Annotator 選單",
+        "description": "Tool tip string of annotator menu button"
+    },
+    "eraseAllTooltip": {
+        "message": "全部清除",
+        "description": "Tool tip string of annotator erase all button"
+    },
+    "freehandTooltip": {
+        "message": "手繪工具",
+        "description": "Tool tip string of annotator freehand button"
+    },
+    "lineTooltip": {
+        "message": "直線工具",
+        "description": "Tool tip string of annotator freehand button"
+    },
+    "arrowTooltip": {
+        "message": "箭頭工具",
+        "description": "Tool tip string of annotator arrow button"
+    },
+    "rectangleTooltip": {
+        "message": "矩形工具",
+        "description": "Tool tip string of annotator rectangle button"
+    },
+    "ellipseTooltip": {
+        "message": "橢圓形工具",
+        "description": "Tool tip string of annotator ellipse button"
+    },
+    "eraserTooltip": {
+        "message": "橡皮擦",
+        "description": "Tool tip string of annotator eraser button"
+    },
+    "undoTooltip": {
+        "message": "復原",
+        "description": "Tool tip string of annotator undo button"
+    },
+    "redoTooltip": {
+        "message": "取消復原",
+        "description": "Tool tip string of annotator redo button"
+    },
+    "okiopointTooltip": {
+        "message": "OKIOPoint 啟動/取消",
+        "description": "Tool tip string of OKIOPoint"
+    },
+    "openLibraryTooltip": {
+        "message": "開啟媒體庫目錄",
+        "description": "Tool tip string of Go to Library"
+    },
+    "mainCamera": {
+        "message": "主要相機",
+        "description": "Text string of Main Camera in setting"
+    },
+    "cameraSource": {
+        "message": "來源",
+        "description": "Text string in setting"
+    },
+    "secondaryCamera": {
+        "message": "次要相機",
+        "description": "Text string of Secondary Camera in setting"
+    },
+    "pipPosition": {
+        "message": "位置",
+        "description": "Text string in setting"
+    },
+    "pipTopLeft": {
+        "message": "左上",
+        "description": "Position option"
+    },
+    "pipTopRight": {
+        "message": "右上",
+        "description": "Text string in setting"
+    },
+    "pipBottomLeft": {
+        "message": "左下",
+        "description": "Text string in setting"
+    },
+    "pipBottomRight": {
+        "message": "右下",
+        "description": "Text string in setting"
+    },
+    "pipCustomize": {
+        "message": "自訂",
+        "description": "Text string in setting"
+    },
+    "pipSize": {
+        "message": "尺寸",
+        "description": "Text string in setting"
+    },
+    "microphone": {
+        "message": "麥克風",
+        "description": "Text string in setting"
+    },
+    "recordResolution": {
+        "message": "錄影解析度",
+        "description": "Text string in setting"
+    },
+    "recordResolutionTooltip": {
+        "message": "錄影解析度會根據主要相機的解析度自動改變",
+        "description": "Tool tip string of Recording Resolution"
+    },
+    "enableTxt": {
+        "message": "啟動",
+        "description": "Text string of enable function"
+    },
+    "disableTxt": {
+        "message": "取消",
+        "description": "Text string of disable function"
+    },
+    "panSpeedTxt": {
+        "message": "移動速度",
+        "description": "Text string of pan speed function"
+    },
+    "okiopointOption1": {
+        "message": "放大並追蹤",
+        "description": "Option 1 of OKIOPoint function"
+    },
+    "okiopointOption2": {
+        "message": "強調",
+        "description": "Option 2 of OKIOPoint function"
+    },
+    "okiopointOption3": {
+        "message": "螢光筆",
+        "description": "Option 3 of OKIOPoint function"
+    },
+    "okiopointOption4": {
+        "message": "底線",
+        "description": "Option 4 of OKIOPoint function"
+    },
+    "okiopointOption5": {
+        "message": "聚光燈",
+        "description": "Option 5 of OKIOPoint function"
+    },
+    "okiopointOption6": {
+        "message": "頭像",
+        "description": "Option 6 of OKIOPoint function"
+    },
+    "optionSize1": {
+        "message": "大",
+        "description": "Size option 1"
+    },
+    "optionSize2": {
+        "message": "中",
+        "description": "Size option 2"
+    },
+    "optionSize3": {
+        "message": "小",
+        "description": "Size option 3"
+    },
+    "optionSize4": {
+        "message": "迷你",
+        "description": "Size option 5"
+    },
+    "resetDefault": {
+        "message": "恢復為預設值",
+        "description": "Tool tip string of reset to default button"
+    },
+    "swapCameras": {
+        "message": "交換相機",
+        "description": "Tool tip string of swap cameras button"
+    },
+    "okiopointWarningMsg1": {
+        "message": "OKIOCAM Live 只能在放大並追蹤模式下，或者是 OKIOPoint 取消時錄影。如果選擇繼續錄影，OKIOPoint 將會自動取消。是否要繼續？",
+        "description": "Warning message for recording with OKIOPoint"
+    },
+    "okiopointWarningMsg2": {
+        "message": "OKIOPoint 只支援 OKIOLABS 相機。請拜訪我們的網頁 www.okiolabs.com 以取得更多資訊。",
+        "description": "Warning message for OKIOPoint"
+    },
+    "okiocamWarningMsg": {
+        "message": "我們發現你的電腦上沒有連接 OKIOCAM。請將 OKIOCAM 連接到電腦上。搭配 OKIOCAM 使用此程式將會有最佳體驗。想要知道更多有關OKIOCAM, 請拜訪 www.okiolabs.com",
+        "description": "Warning message for no OKIOCAM"
+    },
+    "avatarImage": {
+        "message": "圖案:",
+        "description": "Choose image file for avatar function"
+    },
+    "avatarChnagetip": {
+        "message": "選擇要顯示的 PNG 圖檔",
+        "description": "Tool tip string of Change button for avatar function"
+    },
+    "avatarImport": {
+        "message": "匯入",
+        "description": "Import button for avatar function"
+    },
+    "avatarClose": {
+        "message": "關閉",
+        "description": "Close button for avatar gallery"
+    },
+    "avatarImporttip": {
+        "message": "選擇要匯入的 PNG 圖檔",
+        "description": "Tool tip string of avatar image import button"
+    },
+    "avatarBuiltin": {
+        "message": "內建的頭像",
+        "description": "Text of avatar built-in avatars title"
+    },
+    "avatarImported": {
+        "message": "匯入的頭像",
+        "description": "Text of avatar imported avatars title"
+    }
+}

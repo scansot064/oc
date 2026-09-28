@@ -1,0 +1,996 @@
+{
+    "appName": {
+        "message": "OKIOCAM Live",
+        "description": "The title of the application, displayed in the web store."
+    },
+    "appDesc": {
+        "message": "The perfect app for live presentations. Display your camera's image on a larger screen or share it through conferencing software.",
+        "description": "The description of the application, displayed in the web store."
+    },
+    "appNameLive": {
+        "message": "OKIOCAM Live | Mode Live",
+        "description": "The title of the application in Live Mode"
+    },
+    "liveMode": {
+        "message": "Mode Live",
+        "description": "Live Mode in title"
+    },
+    "reviewMode": {
+        "message": "Mode Révision",
+        "description": "Review Mode in title"
+    },
+    "recordWarningTitle": {
+        "message": "Continuer à enregistrer?",
+        "description": "Warning message title when recording"
+    },
+    "recordWarningMsg": {
+        "message": "<span class=\"ui-icon ui-icon-alert\"></span>OKIOCAM Live can only record in Zoom and Follow mode or with OKIOPoint disabled.  If you choose to proceed with the recording, OKIOPoint will be automatically disabled. Would you like to continue?",
+        "description": "Warning message when recording"
+    },
+    "menuTooltip": {
+        "message": "Menu",
+        "description": "Tool tip string of menu button"
+    },
+    "selfieTooltip": {
+        "message": "Mode Selfie",
+        "description": "Tool tip string of selfie button"
+    },
+    "mirrorTooltip": {
+        "message": "Mirroir",
+        "description": "Tool tip string of mirror button"
+    },
+    "zoomTooltip": {
+        "message": "Zoom",
+        "description": "Tool tip string of zoom menu"
+    },
+    "zoomInTooltip": {
+        "message": "Augmenter le zoom",
+        "description": "Tool tip string of zoom in button"
+    },
+    "zoomOutTooltip": {
+        "message": "Réduir le zoom",
+        "description": "Tool tip string of zoom out button"
+    },
+    "rotateTooltip": {
+        "message": "Rotation",
+        "description": "Tool tip string of rotate menu"
+    },
+    "rotateLeftTooltip": {
+        "message": "Rotation horaire",
+        "description": "Tool tip string of rotate clockwise button"
+    },
+    "rotateRightTooltip": {
+        "message": "Rotation antihoraire",
+        "description": "Tool tip string of rotate counterclockwise button"
+    },
+    "expTooltip": {
+        "message": "Exposition",
+        "description": "Tool tip string of exposure menu"
+    },
+    "expAddTooltip": {
+        "message": "Augmenter l'exposition",
+        "description": "Tool tip string of increase exposure button"
+    },
+    "expMinusTooltip": {
+        "message": "Diminuer l'exposition",
+        "description": "Tool tip string of decrease exposure button"
+    },
+    "freezeTooltip": {
+        "message": "Geler l'image",
+        "description": "Tool tip string of freeze button"
+    },
+    "focusTooltip": {
+        "message": "Mise au point / Réglage automatique",
+        "description": "Tool tip string of focus button"
+    },
+    "resetTooltip": {
+        "message": "Réinitialiser",
+        "description": "Tool tip string of reset button"
+    },
+    "appsTooltip": {
+        "message": "OKIOCAM Apps",
+        "description": "Tool tip string of apps button"
+    },
+    "appTimelapse": {
+        "message": "OKIOCAM<br>Time-Lapse",
+        "description": "OKIOCAM Time-Lapse name in apps menu"
+    },
+    "appStopmotion": {
+        "message": "OKIOCAM<br>Stop Motion",
+        "description": "OKIOCAM Stop Motion name in apps menu"
+    },
+    "appPIP": {
+        "message": "OKIOCAM<br>PIP",
+        "description": "OKIOCAM PIP name in apps menu"
+    },
+    "settingTooltip": {
+        "message": "Paramètres",
+        "description": "Tool tip string of setting button"
+    },
+    "fullscreenTooltip": {
+        "message": "Basculer en plein écran",
+        "description": "Tool tip string of fullscreen button"
+    },
+    "snapshotTooltip": {
+        "message": "Prendre un cliché instantané",
+        "description": "Tool tip string of snapshot button"
+    },
+    "recordTooltip": {
+        "message": "Enregistrer",
+        "description": "Tool tip string of record button"
+    },
+    "recordStopTooltip": {
+        "message": "Arrêter l'enregistrement",
+        "description": "Tool tip string of stop record button"
+    },
+    "recordPauseTooltip": {
+        "message": "Suspendre l'enregistrement",
+        "description": "Tool tip string of pause record button"
+    },
+    "recordResumeTooltip": {
+        "message": "Reprendre l'enregistrement",
+        "description": "Tool tip string of resume record button"
+    },
+    "micTooltip": {
+        "message": "Volume du micro",
+        "description": "Tool tip string of microphone display"
+    },
+    "uploadingText": {
+        "message": "Télécharger sur Google Drive",
+        "description": "Text of uploading progress bar"
+    },
+    "reviewTooltip": {
+        "message": "Aller sur le mode révision",
+        "description": "Tool tip string of review mode button"
+    },
+    "freezeModeTooltip": {
+        "message": "Mode gelé activé",
+        "description": "Tool tip string of freeze mode icon"
+    },
+    "accountSetting": {
+        "message": "Compte Google",
+        "description": "Google account setting in setting page"
+    },
+    "accountSignin": {
+        "message": "Se connecter à Google",
+        "description": "Sign in button in Google account setting"
+    },
+    "accountSignout": {
+        "message": "Se déconnecter",
+        "description": "Sign out button in Google account setting"
+    },
+    "librarySetting": {
+        "message": "Emplacement de la librairie",
+        "description": "Library location setting in setting page"
+    },
+    "libraryGoogleDrive": {
+        "message": "Google Drive",
+        "description": "Library location in Google Drive"
+    },
+    "libraryRecommend": {
+        "message": "(recommandée)",
+        "description": "Library location recommended"
+    },
+    "libraryGoogleDriveDesc": {
+        "message": "Enregistrez les fichiers dans le dossier \"Fichiers OKIOCam \" de votre Google Drive. Accédez aux fichiers sur n'importe quel appareil et intégrez-les rapidement et facilement à Google Classroom et à G Suite.",
+        "description": "Library location in Google Drive description"
+    },
+    "libraryLocal": {
+        "message": "Sur le périphérique local",
+        "description": "Library location in Local filesystem"
+    },
+    "libraryLocalDesc": {
+        "message": "Enregistrez les fichiers sur votre ordinateur. Si vous supprimez OKIOCAM Snapshot and Recorder, le navigateur Chrome ou votre compte utilisateur Chrome, tous les fichiers de la bibliothèque seront supprimés à moins que vous ne les ayez préalablement téléchargés.",
+        "description": "Library location in Local filesystem description"
+    },
+    "sourceSetting": {
+        "message": "Paramètres généraux",
+        "description": "Source setting in setting page"
+    },
+    "sourceSettingCamera": {
+        "message": "Caméra",
+        "description": "Camera in source setting"
+    },
+    "sourceSettingMic": {
+        "message": "Micro d'enregistrement",
+        "description": "Microphone setting in source setting"
+    },
+    "snapshotSetting": {
+        "message": "Paramètres Snapshot",
+        "description": "Snapshot setting in setting page"
+    },
+    "snapshotSettingResolution": {
+        "message": "Résolution",
+        "description": "Resolution in snapshot setting"
+    },
+    "snapshotSettingFocusSound": {
+        "message": "Réglage du son",
+        "description": "Focus Sound in snapshot setting"
+    },
+    "snapshotSettingFocusSoundOn": {
+        "message": "Activé",
+        "description": "Focus Sound On option in snapshot setting"
+    },
+    "snapshotSettingFocusSoundOff": {
+        "message": "Désactivé",
+        "description": "Focus Sound Off option in snapshot setting"
+    },
+    "libraryFolder": {
+        "message": "Dossier librairie",
+        "description": "Library folder title in general setting"
+    },
+    "libraryFolderChangeBtn": {
+        "message": "Changement",
+        "description": "Library folder change button text"
+    },
+    "langSetting": {
+        "message": "Langue (Language)",
+        "description": "Language setting title in General settings"
+    },
+    "flickerSetting": {
+        "message": "Réduction du scintillement",
+        "description": "Flicker setting title in General settings"
+    },
+    "recordSetting": {
+        "message": "Paramètres d'enregistrement vidéo",
+        "description": "Record setting in setting page"
+    },
+    "recordSettingRatio": {
+        "message": "Ratio",
+        "description": "Ratio setting in Record setting"
+    },
+    "recordSettingQuality": {
+        "message": "Qualité",
+        "description": "Quality setting in Record setting"
+    },
+    "recordSettingQualityLow": {
+        "message": "Basse",
+        "description": "Low quality text in Record setting"
+    },
+    "recordSettingQualityHigh": {
+        "message": "Haute",
+        "description": "High quality text in Record setting"
+    },
+    "recordSettingQualityLow1": {
+        "message": "Basse (1024x768)",
+        "description": "Low quality setting in Record setting"
+    },
+    "recordSettingQualityHigh1": {
+        "message": "Haute (1600x1200)",
+        "description": "High quality setting in Record setting"
+    },
+    "recordSettingQualityLow2": {
+        "message": "Basse (1280x720)",
+        "description": "Low quality setting in Record setting"
+    },
+    "recordSettingQualityHigh2": {
+        "message": "Haute (1920x1080)",
+        "description": "High quality setting in Record setting"
+    },
+    "recordSettingMicVol": {
+        "message": "Volume Micro",
+        "description": "Microphone volume setting in Record setting"
+    },
+    "recordSettingMicDisplay": {
+        "message": "Afficher pendant l'enregistrement",
+        "description": "Display microphone setting in Record setting"
+    },
+    "recordSettingNote": {
+        "message": "Note: L'enregistement ne peut pas excéder 60 min.",
+        "description": "Note in Record setting"
+    },
+    "buttonSetting": {
+        "message": "Bouton paramètres",
+        "description": "Button setting in setting page"
+    },
+    "buttonSettingDefault": {
+        "message": "(par défaut)",
+        "description": "(default) string in Button setting"
+    },
+    "buttonSettingActivate": {
+        "message": "Activer",
+        "description": "Activate action in Button setting"
+    },
+    "buttonSettingActivateDefault": {
+        "message": "Activer (par défaut)",
+        "description": "Activate action with default in Button setting"
+    },
+    "buttonSettingZoom": {
+        "message": "Zoom",
+        "description": "Zoom action in Button setting"
+    },
+    "buttonSettingZoomDefault": {
+        "message": "Zoom (par défaut)",
+        "description": "Zoom action with default in Button setting"
+    },
+    "buttonSettingZoomDesc": {
+        "message": "Appuyez sur le bouton pour parcourir les taux de zoom.",
+        "description": "Zoom description in Button setting"
+    },
+    "buttonSettingZoomCustom": {
+        "message": "N'hésitez pas à personnaliser le taux de zoom comme bon vous semble.",
+        "description": "Zoom customize description in Button setting"
+    },
+    "buttonSettingSnapshot": {
+        "message": "Snapshot",
+        "description": "Snapshot action in Button setting"
+    },
+    "buttonSettingSnapshotDefault": {
+        "message": "Snapshot (par défaut)",
+        "description": "Snapshot action with default in Button setting"
+    },
+    "buttonSettingSelfie": {
+        "message": "Mode Selfie",
+        "description": "Selfie Mode action in Button setting"
+    },
+    "buttonSettingSelfieDefault": {
+        "message": "Mode Selfie (par défaut)",
+        "description": "Selfie Mode with default action in Button setting"
+    },
+    "buttonSettingURL": {
+        "message": "Allez à l'URL",
+        "description": "Go to URL action in Button setting"
+    },
+    "buttonSettingURLDefault": {
+        "message": "Allez à l'URL (par défaut)",
+        "description": "Go to URL action with default in Button setting"
+    },
+    "buttonSettingKeyboard": {
+        "message": "Raccourcis clavier",
+        "description": "Keyboard Shortcuts link in Button setting"
+    },
+    "timerSetting": {
+        "message": "Retardateur et révision",
+        "description": "Timer and Review setting in setting page"
+    },
+    "timerSettingShutter": {
+        "message": "Retardateur",
+        "description": "Shutter Timer in Timer and Review setting"
+    },
+    "timerSettingShutter0": {
+        "message": "0 seconde",
+        "description": "0 second Shutter Timer in Timer and Review setting"
+    },
+    "timerSettingShutter2": {
+        "message": "2 secondes",
+        "description": "2 seconds Shutter Timer in Timer and Review setting"
+    },
+    "timerSettingShutter5": {
+        "message": "5 secondes",
+        "description": "5 seconds Shutter Timer in Timer and Review setting"
+    },
+    "timerSettingReview": {
+        "message": "Révision après prise de vue",
+        "description": "Post-Shot Review in Timer and Review setting"
+    },
+    "timerSettingReviewYes": {
+        "message": "Oui",
+        "description": "Yes in Post-Shot Review setting"
+    },
+    "timerSettingReviewNo": {
+        "message": "Non",
+        "description": "No in Post-Shot Review setting"
+    },
+    "quit": {
+        "message": "Quitter",
+        "description": "Quit OKIOCAM Snapshot and Recorder in setting page"
+    },
+    "firstSetup": {
+        "message": "Première installation ",
+        "description": "First Time Setup in setting page"
+    },
+    "aboutUs": {
+        "message": "À propos de nous",
+        "description": "About Us in setting page"
+    },
+    "help": {
+        "message": "Aide",
+        "description": "Help in setting page"
+    },
+    "libraryGoogleDriveFirstDesc": {
+        "message": "Enregistrez des snapshots (clichés instantanés) ou des vidéos dans le dossier \" fichiers OKIOCam \"de votre Google Drive. Accédez aux fichiers sur n'importe quel appareil et intégrez-les rapidement et facilement à Google Classroom et G Suite.",
+        "description": "Library location in Google Drive description in First Time Setup"
+    },
+    "libraryLocalFirstDesc": {
+        "message": "Enregistrez des snapshots (clichés instantanés) ou des vidéos sur votre ordinateur. Si vous supprimez Snapshot and Recorder OKIOCAM, de votre navigateur Chrome ou votre compte utilisateur Chrome, les fichiers que vous avez créés seront supprimés de votre ordinateur. Non recommandé sur Chrome OS.",
+        "description": "Library location in Local filesystem description in First Time Setup"
+    },
+    "firstSetupStep3Title": {
+        "message": "Génial !",
+        "description": "Step 3 title in First Time Setup"
+    },
+    "firstSetupStep3Text": {
+        "message": "\\ Vous êtes prêt. C'est parti !/",
+        "description": "Step 3 text in First Time Setup"
+    },
+    "firstSetupStep1Desc": {
+        "message": "Se connecter à votre compte Google",
+        "description": "Step 1 description in First Time Setup"
+    },
+    "firstSetupBtnPrev": {
+        "message": "Précédent",
+        "description": "Previous button in First Time Setup"
+    },
+    "firstSetupBtnSkip": {
+        "message": "Passer",
+        "description": "Skip button in First Time Setup"
+    },
+    "firstSetupBtnCancel": {
+        "message": "Annuler",
+        "description": "Cancel button in First Time Setup"
+    },
+    "firstSetupBtnNext": {
+        "message": "Suivant",
+        "description": "Next button in First Time Setup"
+    },
+    "backLiveTooltip": {
+        "message": "Retour au Live",
+        "description": "Tooltip string of Back to Live button in Review Mode"
+    },
+    "backLiveBtn": {
+        "message": "Retour",
+        "description": "Back to Live button in Review Mode"
+    },
+    "backGridTooltip": {
+        "message": "Retour à la grille d'aperçu",
+        "description": "Tooltip string of Back to Grid View button in Review Mode"
+    },
+    "uploadClassroomTooltip": {
+        "message": "Télécharger sur Google Classroom",
+        "description": "Tooltip string of Upload to Google Classroom button in Review Mode"
+    },
+    "uploadDriveTooltip": {
+        "message": "Télécharger to Google Drive",
+        "description": "Tooltip string of Upload to Google Drive button in Review Mode"
+    },
+    "gotoDriveTooltip": {
+        "message": "Aller sur le dossier Librairie",
+        "description": "Tooltip string of Go to library folder button in Review Mode"
+    },
+    "downloadTooltip": {
+        "message": "Télécharger le ficher sélectionné",
+        "description": "Tooltip string of Download Selected Files button in Review Mode"
+    },
+    "deleteTooltip": {
+        "message": "Supprimer le ficher sélectionné",
+        "description": "Tooltip string of Delete Selected Files button in Review Mode"
+    },
+    "menuDeleteAll": {
+        "message": "Suprimer tout",
+        "description": "Delete All menu item of more menu in Review Mode"
+    },
+    "menuNewTab": {
+        "message": "Ouvrir dans un nouvel onglet",
+        "description": "Open in New Tab menu item of more menu in Review Mode"
+    },
+    "menuInfo": {
+        "message": "Information",
+        "description": "Information menu item of more menu in Review Mode"
+    },
+    "noFile": {
+        "message": "Aucun ficher trouvé",
+        "description": "No file message in Review Mode"
+    },
+    "menuDelete": {
+        "message": "Supprimer",
+        "description": "Delete menu item of context menu in Review Mode"
+    },
+    "menuUpload": {
+        "message": "Charger",
+        "description": "Upload menu item of context menu in Review Mode"
+    },
+    "menuDownload": {
+        "message": "Télécharger",
+        "description": "Download menu item of context menu in Review Mode"
+    },
+    "prevFileTooltip": {
+        "message": " Fichier précédent",
+        "description": "Tooltip string of Previous file in Single file view in Review Mode"
+    },
+    "nextFileTooltip": {
+        "message": "Fichier suivant",
+        "description": "Tooltip string of Next file in Single file view in Review Mode"
+    },
+    "imgFullscreenTooltip": {
+        "message": "Plein écran",
+        "description": "Tooltip string of fullscreen button in Single file view in Review Mode"
+    },
+    "noFileSelectedTitle": {
+        "message": "Attention",
+        "description": "Alert message title when no file selected and upload in Review Mode"
+    },
+    "noFileSelectedMsg": {
+        "message": "Vous devez sélectionner au moins un fichier.",
+        "description": "Alert message when no file selected and upload in Review Mode"
+    },
+    "className": {
+        "message": "Cours",
+        "description": "Class name title when uploading to Google Classroom in Review Mode"
+    },
+    "taskName": {
+        "message": "Tâche",
+        "description": "Task name title when uploading to Google Classroom in Review Mode"
+    },
+    "taskType1": {
+        "message": "Devoir",
+        "description": "Task type assignment when uploading to Google Classroom in Review Mode"
+    },
+    "taskType2": {
+        "message": "Question",
+        "description": "Task type short answer question when uploading to Google Classroom in Review Mode"
+    },
+    "taskType3": {
+        "message": "Questionnaire",
+        "description": "Task type multiple answer question when uploading to Google Classroom in Review Mode"
+    },
+    "taskType4": {
+        "message": "Annonce",
+        "description": "Task type announcement when uploading to Google Classroom in Review Mode"
+    },
+    "taskTitle": {
+        "message": "Titre",
+        "description": "Title of the task when uploading to Google Classroom in Review Mode"
+    },
+    "taskMessage": {
+        "message": "Message",
+        "description": "Message of the task when uploading to Google Classroom in Review Mode"
+    },
+    "taskDueDate": {
+        "message": "Date limite",
+        "description": "Due Date of the task when uploading to Google Classroom in Review Mode"
+    },
+    "taskDueTime": {
+        "message": "Heure",
+        "description": "Due Time of the task when uploading to Google Classroom in Review Mode"
+    },
+    "taskOption": {
+        "message": "Option",
+        "description": "Option of the multiple answer question task when uploading to Google Classroom in Review Mode"
+    },
+    "btnCancel": {
+        "message": "Annuler",
+        "description": "Button cancel when uploading to Google Classroom in Review Mode"
+    },
+    "btnCreate": {
+        "message": "Créer",
+        "description": "Button create when uploading to Google Classroom in Review Mode"
+    },
+    "uploadingClassText": {
+        "message": "Télécharger sur Google Classroom",
+        "description": "Text of uploading progress bar when uploading to Google Classroom"
+    },
+    "uploadingDone": {
+        "message": "Fini",
+        "description": "% done of uploading progress bar"
+    },
+    "uploadingWarning": {
+        "message": "Les vitesses de téléchargement peuvent varier considérablement en fonction de la vitesse de votre connexion Internet, du format et de la taille du fichier",
+        "description": "Message d'avertissement concernant la barre de progression du téléchargement"
+    },
+    "uploadClassDone": {
+        "message": "Vous avez publié dans votre classe!",
+        "description": "Upload finished message when uploading to Google Classroom"
+    },
+    "btnView": {
+        "message": "VOIR",
+        "description": "Button view when upload finished in Review Mode"
+    },
+    "btnOK": {
+        "message": "OK",
+        "description": "Button ok when upload finished in Review Mode"
+    },
+    "uploadDriveMyDrive": {
+        "message": "Mon Drive",
+        "description": "My Drive name in Google Drive"
+    },
+    "btnBack": {
+        "message": "Retour",
+        "description": "Back button in folder list when uploading to Google Drive"
+    },
+    "btnGoto": {
+        "message": "Aller à",
+        "description": "Go to button in folder list when uploading to Google Drive"
+    },
+    "folderString": {
+        "message": "Dossier",
+        "description": "Folder string in folder list when uploading to Google Drive"
+    },
+    "uploadDriveCreate": {
+        "message": "Créer un nouveau dossier",
+        "description": "Create a New Folder text when uploading to Google Drive in Review Mode"
+    },
+    "unnamedFolder": {
+        "message": "Dossier sans nom",
+        "description": "Default text of creating new folder when uploading to Google Drive in Review Mode"
+    },
+    "btnUpload": {
+        "message": "Télécharger",
+        "description": "Button upload when uploading to Google Drive in Review Mode"
+    },
+    "uploadingDriveText": {
+        "message": "Télécharger sur Google Drive",
+        "description": "Text of uploading progress bar when uploading to Google Drive"
+    },
+    "uploadDriveDone": {
+        "message": "Ficher télécharger sur Google Drive",
+        "description": "Upload finished message when uploading to Google Drive"
+    },
+    "deleteAllTitle": {
+        "message": "Retirer",
+        "description": "Delete All alert dialog title"
+    },
+    "deleteAllContent": {
+        "message": "Êtes-vous sûr de vouloir supprimer TOUS les fichiers? <br> Cette opération est irréversible!",
+        "description": "Delete All alert dialog content"
+    },
+    "btnCancelDeleteAll": {
+        "message": "OOPS! NON, Annuler",
+        "description": "Button cancel in delete all alert dialog"
+    },
+    "btnYesDeleteAll": {
+        "message": "Suprimer TOUT",
+        "description": "Button yes in delete all alert dialog"
+    },
+    "firstSkipTitle": {
+        "message": "Attention",
+        "description": "First time setup skip alert dialog title"
+    },
+    "firstSkipContent": {
+        "message": "Si vous n'accepter pas la connexion à votre compte Google, les fichiers seront stockés localement. Lorsque vous supprimez OKIOCAM Snapshot and Recorder, le navigateur Chrome ou votre compte utilisateur Chrome, les fichiers seront supprimés de votre ordinateur. Non recommandé sur Chrome Système d'exploitation. Appuyez sur \"Terminer \" pour quitter ou sur \"Continuer \" pour vous connecter au compte Google.",
+        "description": "Première configuration ignorer la boîte de dialogue d'alerte"
+    },
+    "btnContinue": {
+        "message": "Continuer",
+        "description": "Button continue in First time setup skip all alert dialog"
+    },
+    "btnFinish": {
+        "message": "Fini",
+        "description": "Button finish in First time setup skip all alert dialog"
+    },
+    "deleteAllDoneMsg": {
+        "message": "Tous les fichiers sont supprimés",
+        "description": "Alert message when all files are deleted."
+    },
+    "singleFileDeleteDoneMsg": {
+        "message": "Le fichier est supprimé",
+        "description": "Alert message when single file is deleted."
+    },
+    "filesDeleteDoneMsg": {
+        "message": "Tous les fichiers sélectionnés sont supprimés",
+        "description": "Alert message when selected files are deleted."
+    },
+    "errorMsg1": {
+        "message": "Vous devez autoriser la caméra à utiliser cette extension",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "errorMsg2": {
+        "message": "Nous n'avons pas pu accéder à OKIOCAM. Veuillez vous assurer que l'appareil est branché et fermer les autres applications utilisant 'OKIOCAM.",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "errorMsg3": {
+        "message": "La résolution que vous avez sélectionnée n'est pas prise en charge",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "errorMsg4": {
+        "message": "Aucune caméra",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "errorMsg5": {
+        "message": "Nous n'avons pas pu accéder à OKIOCAM. Veuillez vous assurer qu'aucune autre application ne l'utilise actuellement",
+        "description": "Alert message in handling error when getting video stream"
+    },
+    "classMsg1": {
+        "message": "Le titre est requis !",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "classMsg2": {
+        "message": "Le message est requis !",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "classMsg3": {
+        "message": "L'option ne peut pas être vide !",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "classMsg4": {
+        "message": "Les options ne peuvent pas être dupliquées !",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "classMsg5": {
+        "message": "Impossible à créer",
+        "description": "Alert message when uploading to Google Classroom"
+    },
+    "btnDriverMsg": {
+        "message": "Can not connect to OKIOCAM Button Driver",
+        "description": "Message d'alerte lorsque vous ne pouvez pas vous connecter au bouton Driver"
+    },
+    "confirmQuit": {
+        "message": "Fermer OKIOCAM Snapshot and Recorder?",
+        "description": "Confirm message when quit"
+    },
+    "confirmDelLocal": {
+        "message": "Le fichier actuel sera supprimé. Êtes-vous sûr?",
+        "description": "Confirm message when delete single file from local disk"
+    },
+    "confirmDelDrive": {
+        "message": "Le fichier actuel sera supprimé de votre appareil ainsi que de votre compte Drive. Êtes-vous sûr?",
+        "description": "Confirm message when delete single file from Google Drive"
+    },
+    "confirmDelSelectLocal": {
+        "message": "Tous les fichiers sélectionnés seront supprimés. Êtes-vous sûr?",
+        "description": "Confirm message when delete selected files from local disk"
+    },
+    "confirmDelSelectDrive": {
+        "message": "Tous les fichiers sélectionnés seront supprimés de votre appareil ainsi que de votre compte Drive. Êtes-vous sûr?",
+        "description": "Confirm message when delete selected files from Google Drive"
+    },
+    "noStorageMsg": {
+        "message": "L'espace de stockage n'est pas suffisant pour l'enregistrement, veuillez supprimer certains fichiers de la bibliothèque",
+        "description": "Alert message when there is not enough storage for recording"
+    },
+    "confirmRecordShort": {
+        "message": "L'espace de stockage sur Chrome n'est pas suffisant pour enregistrer 60 minutes. La durée d'enregistrement est estimée à $ LIMIT_LENGTH $ minutes. Veuillez supprimer certains fichiers de la bibliothèque pour enregistrer 60 minutes. Voulez-vous continuer l'enregistrement?",
+        "description": "Confirmer le message lorsqu'il n'y a pas assez de stockage pour enregistrer 60 minutes",
+        "placeholders": {
+            "limit_length": {
+                "content": "$1",
+                "example": "10"
+            }
+        }
+    },
+    "settingNotSupportMsg": {
+        "message": "Le paramètre d'enregistrement que vous avez sélectionné n'est pas pris en charge",
+        "description": "Alert message when the selected record setting is not supported by the camera"
+    },
+    "alertTitle": {
+        "message": "Attention !",
+        "description": "Alert message title"
+    },
+    "alertButton": {
+        "message": "OK",
+        "description": "Alert message button text"
+    },
+    "confirmTitle": {
+        "message": "Averstissement !",
+        "description": "Confirm message title"
+    },
+    "cssMore": {
+        "message": "Plus",
+        "description": "More string in CSS"
+    },
+    "cssLess": {
+        "message": "Moins",
+        "description": "Less string in CSS"
+    },
+    "cameraPageDesc": {
+        "message": "Le but de cette page est d'accéder à votre caméra et à votre microphone",
+        "description": "Message displayed in camera-mic page"
+    },
+    "cameraPageDone": {
+        "message": "Vous pouvez maintenant fermer cette page et réouvrir OKIOCAM Snapshot and Recorder",
+        "description": "Message displayed in camera-mic page when done"
+    },
+    "infoFilename": {
+        "message": "Nom du fichier:",
+        "description": "File Name field in file information"
+    },
+    "infoDuration": {
+        "message": "Durée:",
+        "description": "Duration field in file information"
+    },
+    "infoSecond": {
+        "message": "secondes",
+        "description": "second in file information"
+    },
+    "infoResolution": {
+        "message": "Résolution:",
+        "description": "Resolution field in file information"
+    },
+    "infoCreateDate": {
+        "message": "Date de création:",
+        "description": "Create Date field in file information"
+    },
+    "infoFilesize": {
+        "message": "Taille du fichier:",
+        "description": "File Size field in file information"
+    },
+    "optionNone": {
+        "message": "Aucun",
+        "description": "Option None string in device list"
+    },
+    "noOKIOCAMMsg1": {
+        "message": "Nous avons détecté que vous n'avez pas d'OKIOCAM connecté à votre ordinateur. Veuillez s'il vous plait connecter votre OKIOCAM.",
+        "description": "Message when detecting no OKIOCAM connected"
+    },
+    "noOKIOCAMMsg2": {
+        "message": "Si vous ne possédez pas d'OKIOCAM, vous pouvez toujours utiliser cette application, mais vous n'aurez pas accès à toutes ses fonctionnalités.",
+        "description": "Message when detecting no OKIOCAM connected"
+    },
+    "noOKIOCAMMsg3": {
+        "message": "Pour en savoir plus sur OKIOCAM, visitez www.okiolabs.com.",
+        "description": "Message when detecting no OKIOCAM connected"
+    },
+    "changeFolderWarningMsg": {
+        "message": "Si le répertoire du dossier est changé, <br>les fichiers ne seront pas transférés <br>dans le nouveau répertoire. Les fichiers <br>stockés dans l'ancien répertoire n'apparaîtront <br>plus en mode révision. <br><br> Voulez-vous continuer?",
+        "description": "Warning message when changing library folder"
+    },
+    "confirmBtnYes": {
+        "message": "Oui",
+        "description": "Text on Yes button in confirm dialog"
+    },
+    "confirmBtnNo": {
+        "message": "Non",
+        "description": "Text on No button in confirm dialog"
+    },
+    "annotatorTooltip": {
+        "message": "Annotateur activer/désactiver",
+        "description": "Tool tip string of annotator button"
+    },
+    "annotatorMenuTooltip": {
+        "message": "Annotateur Menu",
+        "description": "Tool tip string of annotator menu button"
+    },
+    "eraseAllTooltip": {
+        "message": "Tout effacer",
+        "description": "Tool tip string of annotator erase all button"
+    },
+    "freehandTooltip": {
+        "message": "Main levée",
+        "description": "Tool tip string of annotator freehand button"
+    },
+    "lineTooltip": {
+        "message": "Ligne",
+        "description": "Tool tip string of annotator freehand button"
+    },
+    "arrowTooltip": {
+        "message": "Flèche",
+        "description": "Tool tip string of annotator arrow button"
+    },
+    "rectangleTooltip": {
+        "message": "Rectangle",
+        "description": "Tool tip string of annotator rectangle button"
+    },
+    "ellipseTooltip": {
+        "message": "Ellipse",
+        "description": "Tool tip string of annotator ellipse button"
+    },
+    "eraserTooltip": {
+        "message": "Gomme",
+        "description": "Tool tip string of annotator eraser button"
+    },
+    "undoTooltip": {
+        "message": "Annuler",
+        "description": "Tool tip string of annotator undo button"
+    },
+    "redoTooltip": {
+        "message": "Rétablir",
+        "description": "Tool tip string of annotator redo button"
+    },
+    "okiopointTooltip": {
+        "message": "OKIOPoint activer/désactiver",
+        "description": "Tool tip string of OKIOPoint"
+    },
+    "openLibraryTooltip": {
+        "message": "Aller au Dossier Bibliothèque",
+        "description": "Tool tip string of Go to Library"
+    },
+    "mainCamera": {
+        "message": "Caméra principale",
+        "description": "Text string of Main Camera in setting"
+    },
+    "cameraSource": {
+        "message": "Source",
+        "description": "Text string in setting"
+    },
+    "secondaryCamera": {
+        "message": "Caméra secondaire",
+        "description": "Text string of Secondary Camera in setting"
+    },
+    "pipPosition": {
+        "message": "Position",
+        "description": "Text string in setting"
+    },
+    "pipTopLeft": {
+        "message": "En haut à gauche",
+        "description": "Position option"
+    },
+    "pipTopRight": {
+        "message": "En haut à droite",
+        "description": "Text string in setting"
+    },
+    "pipBottomLeft": {
+        "message": "En bas à gauche",
+        "description": "Text string in setting"
+    },
+    "pipBottomRight": {
+        "message": "En bas à droite",
+        "description": "Text string in setting"
+    },
+    "pipCustomize": {
+        "message": "Personnaliser",
+        "description": "Text string in setting"
+    },
+    "pipSize": {
+        "message": "Taille",
+        "description": "Text string in setting"
+    },
+    "microphone": {
+        "message": "Microphone",
+        "description": "Text string in setting"
+    },
+    "recordResolution": {
+        "message": "Résolution d'enregistrement",
+        "description": "Text string in setting"
+    },
+    "recordResolutionTooltip": {
+        "message": "La résolution d'enregistrement est automatiquement modifiée en fonction de la résolution de la caméra principale",
+        "description": "Tool tip string of Recording Resolution"
+    },
+    "enableTxt": {
+        "message": "Activer",
+        "description": "Text string of enable function"
+    },
+    "disableTxt": {
+        "message": "Désactiver",
+        "description": "Text string of disable function"
+    },
+    "panSpeedTxt": {
+        "message": "Vitesse de panoramique",
+        "description": "Text string of pan speed function"
+    },
+    "okiopointOption1": {
+        "message": "Zoom et Suivre",
+        "description": "Option 1 of OKIOPoint function"
+    },
+    "okiopointOption2": {
+        "message": "Mettre en avant",
+        "description": "Option 2 of OKIOPoint function"
+    },
+    "okiopointOption3": {
+        "message": "Surligneur",
+        "description": "Option 3 of OKIOPoint function"
+    },
+    "okiopointOption4": {
+        "message": "Souligner",
+        "description": "Option 4 of OKIOPoint function"
+    },
+    "okiopointOption5": {
+        "message": "Spot",
+        "description": "Option 5 of OKIOPoint function"
+    },
+    "optionSize1": {
+        "message": "Grand",
+        "description": "Size option 1"
+    },
+    "optionSize2": {
+        "message": "Moyen",
+        "description": "Size option 2"
+    },
+    "optionSize3": {
+        "message": "Petit",
+        "description": "Size option 3"
+    },
+    "optionSize4": {
+        "message": "Mini",
+        "description": "Size option 4"
+    },
+    "resetDefault": {
+        "message": "Rétablir les paramètres par défaut",
+        "description": "Tool tip string of reset to default button"
+    },
+    "swapCameras": {
+        "message": "Changer de caméras",
+        "description": "Tool tip string of swap cameras button"
+    },
+    "okiopointWarningMsg1": {
+        "message": "OKIOCAM Live peut seulement enregistrer en mode Zoom et Suivre ou avec OKIOPoint désactivé. Si vous choisissez de poursuivre l'enregistrement, OKIOPoint sera automatiquement désactivé. Voulez-vous continuer?",
+        "description": "Warning message for recording with OKIOPoint"
+    },
+    "okiopointWarningMsg2": {
+        "message": "OKIOPoint ne supporte que les caméras OKIOLABS. Veuillez vous rendre sur notre site www.okiolabs.com pour plus d'informations.",
+        "description": "Warning message for OKIOPoint"
+    },
+    "okiocamWarningMsg": {
+        "message": "Nous avons constaté que vous n'avez pas d'OKIOCAM connectée à votre ordinateur. Veuillez connecter votre OKIOCAM maintenant. L'utilisation de cette application avec l'OKIOCAM vous offrira la meilleure expérience utilisateur. Pour en savoir plus sur OKIOCAM, rendez-vous sur www.okiocam.com.",
+        "description": "Warning message for no OKIOCAM"
+    }
+}
