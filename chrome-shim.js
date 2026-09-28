@@ -41,6 +41,12 @@
       sendMessage: (m, cb) => ret(undefined, typeof cb === 'function' ? cb : undefined),
       onMessage: ev,
       lastError: undefined
+      getPlatformInfo: (cb) => {
+        const ua = navigator.userAgent;
+        const os = /Windows/.test(ua) ? 'win' : /Android/.test(ua) ? 'android'
+           : /Mac/.test(ua) ? 'mac' : /CrOS/.test(ua) ? 'cros' : 'linux';
+        return ret({ os: os, arch: 'x86-64', nacl_arch: 'x86-64' }, cb);
+      },
     },
     i18n: { getMessage: k => k, getUILanguage: () => navigator.language }
   };
