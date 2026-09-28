@@ -2698,30 +2698,8 @@ chrome.storage.sync.get({
 */
 
 function accessPermissions() {
-  return new Promise((resolve, reject) => {
-    if (navigator.permissions) {
-      navigator.permissions
-        .query({ name: "camera" })
-        .then((permission) => {
-          if (permission.state === "granted") {
-            resolve();
-          } else if (permission.state === "prompt") {
-            return navigator.mediaDevices.getUserMedia({ video: true, audio: true });
-          } else if (permission.state === "denied") {
-            throw new Error("Permission denied");
-          }
-        })
-        .then((stream) => {
-          stream?.getTracks().forEach((track) => track.stop());
-          resolve();
-        })
-        .catch((error) => {
-          console.log(error);
-          reject(error);
-        });
-    } else {
-      resolve();
-    }
+  return navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then((stream) => {
+    stream.getTracks().forEach((track) => track.stop());
   });
 }
 
@@ -2772,11 +2750,19 @@ const main = async () => {
     console.log(error);
   }
 };
-fetch(chrome.runtime.getURL('../assets/resolutions.json'))
-   .then((resp) => resp.json())
-   .then(function (jsonData) {
-     OKIODeviceList = jsonData;
-     main();
+fetch(new URL("../assets/resolutions.json", import.meta.url))
+  .then((resp) => {
+    if (!resp.ok) {
+      throw new Error(`Failed to load camera resolutions: ${resp.status} ${resp.statusText}`);
+    }
+    return resp.json();
+  })
+  .then(function (jsonData) {
+    OKIODeviceList = jsonData;
+    main();
+  })
+  .catch((error) => {
+    console.error("Failed to initialize camera settings.", error);
   });
 
 
