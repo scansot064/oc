@@ -559,28 +559,6 @@ $(function () {
     ],
   });
 
-  $("#verify-okiocam-dialog").dialog({
-    modal: true,
-    autoOpen: false,
-    buttons: [
-      {
-        text: "Quit",
-        click: function (e) {
-          e.stopPropagation();
-          $(this).dialog("close");
-          node_app.closeApp();
-        },
-      },
-      {
-        text: "Continue",
-        click: function (e) {
-          e.stopPropagation();
-          $(this).dialog("close");
-        },
-      },
-    ],
-  });
-
   $(".ui-button").on("click", function (e) {
     e.stopPropagation();
   });
@@ -2749,7 +2727,6 @@ const main = async () => {
     let deviceList = await navigator.mediaDevices.enumerateDevices(); // get device list
     appendAudioOption([...deviceList]); // append audio option
     appendVideoOption([...deviceList]); // append video option
-    verifyOKIOCamera([...deviceList]); // handle OKIO Camera
     selectVideoOption(); // set select video option value
     selectAudioOption(); // set select audio option value
     getSupportResolution(); // get support resolution
@@ -4001,15 +3978,6 @@ function selectVideoOption() {
   }
 
   return true;
-  // if (videoSelect.options.length == 0) {
-  //   let msg1 =
-  //     "We’ve detected that you don’t have an OKIOCAM connected to your computer. Please connect your OKIOCAM now.";
-  //   let msg2 =
-  //     "If you don’t have an OKIOCAM, you can still use this application, but you won’t have access to all its features.";
-  //   let btn = "OK";
-  //   //showAlert(msg1, btn, msg2, null);
-  //   alert(msg1 + " " + msg2);
-  // }
 }
 
 function selectAudioOption() {
@@ -4032,19 +4000,10 @@ function selectAudioOption() {
 function updateDialogPosition() {
   let okiopointDialogInitialized = $("#verify-okiopoint-dialog").hasClass("ui-dialog-content");
   let okiopointDialogIsOpen = $("#verify-okiopoint-dialog").hasClass("ui-dialog-content");
-  let okiocamDialogInitialized = $("#verify-okiocam-dialog").hasClass("ui-dialog-content");
-  let okiocamDialogIsOpen = $("#verify-okiocam-dialog").hasClass("ui-dialog-content");
   let recordDialogInitialized = $("#record-confirm").hasClass("ui-dialog-content");
   let recordDialogIsOpen = $("#record-confirm").hasClass("ui-dialog-content");
   if (okiopointDialogInitialized && okiopointDialogIsOpen) {
     $("#verify-okiopoint-dialog").dialog("option", "position", {
-      my: "center center",
-      at: "center center",
-      of: $("body"),
-    });
-  }
-  if (okiocamDialogInitialized && okiocamDialogIsOpen) {
-    $("#verify-okiocam-dialog").dialog("option", "position", {
       my: "center center",
       at: "center center",
       of: $("body"),
@@ -4058,22 +4017,6 @@ function updateDialogPosition() {
     });
   }
 }
-/**
- * 初次打開應用，檢查相機列表中是否有 OKIOCAM 相機，如果沒有則要跳出警告，把紀錄儲存在 localStorage
- */
-function verifyOKIOCamera(deviceList) {
-  const okiocamExisted = localStorage.getItem("okiocamExist") !== null;
-  const okiocamExisting = deviceList.some((device) => device.label.includes("eb1a") || device.label.includes("342e"));
-  if (okiocamExisting) {
-    localStorage.setItem("okiocamExist", true);
-  }
-  if (!okiocamExisted && !okiocamExisting) {
-    $("#verify-okiocam-dialog").dialog("open");
-    updateDialogPosition();
-  }
-  return deviceList;
-}
-
 function createResolutionOption(width, height, isDefault = false) {
   const option = document.createElement("option");
   option.dataset.resWidth = width;

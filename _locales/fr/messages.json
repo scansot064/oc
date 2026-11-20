@@ -988,9 +988,5 @@
     "okiopointWarningMsg2": {
         "message": "OKIOPoint ne supporte que les caméras OKIOLABS. Veuillez vous rendre sur notre site www.okiolabs.com pour plus d'informations.",
         "description": "Warning message for OKIOPoint"
-    },
-    "okiocamWarningMsg": {
-        "message": "Nous avons constaté que vous n'avez pas d'OKIOCAM connectée à votre ordinateur. Veuillez connecter votre OKIOCAM maintenant. L'utilisation de cette application avec l'OKIOCAM vous offrira la meilleure expérience utilisateur. Pour en savoir plus sur OKIOCAM, rendez-vous sur www.okiocam.com.",
-        "description": "Warning message for no OKIOCAM"
     }
 }

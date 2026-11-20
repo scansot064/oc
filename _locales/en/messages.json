@@ -1033,10 +1033,6 @@
         "message": "OKIOPoint only supports OKIOLABS cameras. Please visit our website www.okiolabs.com for more information.",
         "description": "Warning message for OKIOPoint"
     },
-    "okiocamWarningMsg": {
-        "message": "We've found that you don't have an OKIOCAM connected to your computer. Please connect your OKIOCAM now. Using this application with OKIOCAM will provide the best user experience. To learn more about OKIOCAM, visit www.okiolabs.com.",
-        "description": "Warning message for no OKIOCAM"
-    },
     "avatarImage": {
         "message": "Image:",
         "description": "Choose image file for avatar function"

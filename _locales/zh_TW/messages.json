@@ -1005,10 +1005,6 @@
         "message": "OKIOPoint 只支援 OKIOLABS 相機。請拜訪我們的網頁 www.okiolabs.com 以取得更多資訊。",
         "description": "Warning message for OKIOPoint"
     },
-    "okiocamWarningMsg": {
-        "message": "我們發現你的電腦上沒有連接 OKIOCAM。請將 OKIOCAM 連接到電腦上。搭配 OKIOCAM 使用此程式將會有最佳體驗。想要知道更多有關OKIOCAM, 請拜訪 www.okiolabs.com",
-        "description": "Warning message for no OKIOCAM"
-    },
     "avatarImage": {
         "message": "圖案:",
         "description": "Choose image file for avatar function"
