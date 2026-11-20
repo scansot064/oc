@@ -226,21 +226,6 @@ $(function () {
   $("aside .tool .btn-okiopoint").on("click", function (e) {
     e.stopPropagation();
 
-    // browser unsupport
-    if ($(this).hasClass("unsupport")) {
-      return false;
-    }
-    // other camera unavaliable
-    if ($(this).hasClass("unavaliable")) {
-      if( recordStart == true)
-        return false;
-      else {
-        $("#verify-okiopoint-dialog").dialog("open");
-        updateDialogPosition();
-        return false;
-      }
-    }
-
     $(this).toggleClass("active");
     TrackFn.reset();
     if (!qrCodeTrack.checked) {
@@ -468,67 +453,6 @@ $(function () {
     //saveOptions();
   });
 
-  $("#record-confirm").dialog({
-    autoOpen: false,
-    resizable: false,
-    height: "auto",
-    width: 400,
-    modal: true,
-    buttons: [{
-      text: chrome.i18n.getMessage("btnCancel"),
-      click: function () {
-        $(this).dialog("close");
-        $("#record-confirm").addClass("hide");
-      }
-      }, {
-      text: chrome.i18n.getMessage("btnContinue"),
-      click: function () {
-        //$("#canvasPaint").addClass("hide");
-        qrCodeTrack.checked = false;
-        window.setSwtichState({ on: false, disable: false });
-        DetectFn.stop();
-
-        qrCodeTrack.disabled = true;
-        $(".btn-okiopoint").removeClass("active");
-        $(".btn-okiopoint").addClass("unavaliable");
-        toggleRecording();
-        $(this).dialog("close");
-        $("#record-confirm").addClass("hide");
-      },
-    }]
-  });
-
-  $("#record-confirm2").dialog({
-    autoOpen: false,
-    resizable: false,
-    height: "auto",
-    width: 400,
-    modal: true,
-    title: chrome.i18n.getMessage("recordWarningTitle"),
-    buttons: [{
-      text: chrome.i18n.getMessage("btnCancel"),
-      click: function () {
-        $(this).dialog("close");
-        $("#record-confirm2").addClass("hide");
-      }
-      }, {
-      text: chrome.i18n.getMessage("btnContinue"),
-      click: function () {
-        //$("#canvasPaint").addClass("hide");
-        qrCodeTrack.checked = false;
-        window.setSwtichState({ on: false, disable: false });
-        DetectFn.stop();
-
-        qrCodeTrack.disabled = true;
-        $(".btn-okiopoint").removeClass("active");
-        $(".btn-okiopoint").addClass("unavaliable");
-        toggleRecording();
-        $(this).dialog("close");
-        $("#record-confirm2").addClass("hide");
-      },
-    }]
-  });
-
   // $("#select-alert").dialog({
   //   autoOpen: false,
   //   resizable: false,
@@ -544,20 +468,6 @@ $(function () {
   //     },
   //   },
   // });
-
-  $("#verify-okiopoint-dialog").dialog({
-    modal: true,
-    autoOpen: false,
-    buttons: [
-      {
-        text: "Ok",
-        click: function (e) {
-          e.stopPropagation();
-          $(this).dialog("close");
-        },
-      },
-    ],
-  });
 
   $(".ui-button").on("click", function (e) {
     e.stopPropagation();
@@ -938,7 +848,6 @@ var focused = false;
 
 var curUser = "";
 
-var restoreOKIOPoint = false;
 
 const resWidth = [640, 800, 1024, 1280, 1600, 1920, 1920, 2048, 2592, 2592, 3264, 3264, 3840, 4192],
   resHeight = [480, 600, 768, 720, 1200, 1080, 1440, 1536, 1458, 1944, 1836, 2448, 2160, 3104];
@@ -2040,7 +1949,6 @@ window.addEventListener("resize", function (event) {
   }
   throttleUpdateSize();
   updatePIPFramePosition();
-  updateDialogPosition();
   if (liveStore["zoom"] > 1) {
     // updateLiveFrame();
     // updateZoomUI();
@@ -2426,7 +2334,7 @@ function swapCameras(e) {
     streamHeight = window.stream.getVideoTracks()[0].getSettings().height;
 
     updateSize();
-    handleCustomDevice();
+    enableOKIOPoint();
     handleQRCodeDetect();
     updatePIPFramePosition();
 
@@ -3997,26 +3905,6 @@ function selectAudioOption() {
   return true;
 }
 
-function updateDialogPosition() {
-  let okiopointDialogInitialized = $("#verify-okiopoint-dialog").hasClass("ui-dialog-content");
-  let okiopointDialogIsOpen = $("#verify-okiopoint-dialog").hasClass("ui-dialog-content");
-  let recordDialogInitialized = $("#record-confirm").hasClass("ui-dialog-content");
-  let recordDialogIsOpen = $("#record-confirm").hasClass("ui-dialog-content");
-  if (okiopointDialogInitialized && okiopointDialogIsOpen) {
-    $("#verify-okiopoint-dialog").dialog("option", "position", {
-      my: "center center",
-      at: "center center",
-      of: $("body"),
-    });
-  }
-  if (recordDialogInitialized && recordDialogIsOpen) {
-    $("#record-confirm").dialog("option", "position", {
-      my: "center center",
-      at: "center center",
-      of: $("body"),
-    });
-  }
-}
 function createResolutionOption(width, height, isDefault = false) {
   const option = document.createElement("option");
   option.dataset.resWidth = width;
@@ -4888,7 +4776,7 @@ function successCallback(stream) {
   streamHeight = window.stream.getVideoTracks()[0].getSettings().height;
   console.log(streamWidth + " x " + streamHeight);
 
-  handleCustomDevice();
+  enableOKIOPoint();
   handleQRCodeDetect();
   saveSelectState();
   saveCameraState();
@@ -5199,15 +5087,6 @@ async function toggleRecording(e) {
 
       stopDisplayTimer();
       toggleCameraState();
-      $(".btn-okiopoint").removeClass("unavaliable");
-      if (restoreOKIOPoint) {
-        restoreOKIOPoint = false;
-        qrCodeTrack.checked = true;
-        qrCodeTrack.disabled = false;
-        $(".btn-okiopoint").addClass("active");
-        window.setSwtichState({ on: true, disable: false });
-        DetectFn.start();
-      }
     }
     $("#pause").removeClass("hide");
     $("#resume").addClass("hide");
@@ -5275,19 +5154,7 @@ async function startRecording(e) {
     alert(text);
     return;
   }
-  if(qrCodeTrack.checked && window.SettingList["FN_1"] != "FN_1") {
-    restoreOKIOPoint = true;
-    $('#record-confirm').removeClass('hide');
-		$("#record-confirm").dialog("open");
-  }
-  else if(!qrCodeTrack.checked)  {
-    $(".btn-okiopoint").addClass("unavaliable");
-    toggleRecording();
-  }
-  else {  // Zoom and Follow
-    toggleRecording();
-  }
-
+  toggleRecording();
 }
 
 function onAccessApproved(chromeMediaSourceId, opts) {
@@ -8592,7 +8459,6 @@ document.body.addEventListener("click", function (event) {
   // console.log(event.target);
   if (
     inLive &&
-    $("#record-confirm").hasClass("hide") &&
     !$("#modal_setting").hasClass("active") &&
     !$("#annotatorMode").hasClass("active") &&
     !$("#effectControl").hasClass("active")
@@ -10721,58 +10587,12 @@ function saveSelectState() {
   localStorage.setItem("deviceId", vidpid);
   localStorage.setItem("micId", micId);
 }
-/**
- * 確認是不是 OKIOCAM ，如果是 OKIOCAM，就要預設啟動  OKIOPoint。
- * 同時替上方和右側面板的 OKIOPoint 按鈕是否 disabled，以及給 OKIOPoint 套上樣式。
- */
-function handleCustomDevice() {
-  // not in electron
-  if (!window.isElectron) {
-    // $(".btn-okiopoint").removeClass("active");
-    // $(".btn-okiopoint").addClass("unavaliable");
-    // $(".btn-okiopoint").addClass("unsupport");
-    // window.setSwtichState({ on: false, disable: true });
-    // qrCodeTrack.disabled = false;
-    // return false;
-  }
-
-  let vidpid = videoSelect[videoSelect.selectedIndex].dataset.vidpid;
-  if (swapMode) {
-    vidpid = pipSelect[pipSelect.selectedIndex].dataset.vidpid;
-  }
-
-  let customDevice = OKIODeviceList[vidpid];
-  let firstLoad = qrCodeTrack.dataset.firstLoad || "true";
-
-  // 如果是自己的相機
-  if (customDevice) {
-    // 清除狀態
-    $(".btn-okiopoint").removeClass("active");
-    $(".btn-okiopoint").removeClass("unavaliable");
-    window.setSwtichState({ on: false, disable: false });
-    // 如果為勾選狀態則重新設定狀態
-    $(".btn-okiopoint").addClass("active");
-    window.setSwtichState({ on: true, disable: false });
-    // 初次啟動時設定
-    // if (firstLoad === "true") {
-    //   if (!qrCodeTrack.checked) {
-    //   }
-    //   qrCodeTrack.dataset.firstLoad = "false";
-    // }
-  } else {
-    // 如果不是自己的相機
-    $(".btn-okiopoint").removeClass("active");
-    $(".btn-okiopoint").addClass("unavaliable");
-    window.setSwtichState({ on: false, disable: true });
-  }
-
-  if (customDevice) {
-    qrCodeTrack.checked = true;
-    qrCodeTrack.disabled = false;
-  } else {
-    qrCodeTrack.checked = false;
-    qrCodeTrack.disabled = true;
-  }
+function enableOKIOPoint() {
+  $(".btn-okiopoint").removeClass("unavaliable");
+  $(".btn-okiopoint").addClass("active");
+  window.setSwtichState({ on: true, disable: false });
+  qrCodeTrack.checked = true;
+  qrCodeTrack.disabled = false;
 }
 /**
  * 設定QRCode辨識追蹤的相關參數和 DetectFn、TrackFn 兩個物件有關。
@@ -11994,18 +11814,16 @@ document.addEventListener("keyup", (e) => {
 });
 // 監聽來自 OKIOPoint 面版的開關事件
 window.addEventListener("OKIOPointState", (e) => {
-  if (!$(".btn-okiopoint").hasClass("unavaliable")) {
-    TrackFn.reset();
-    if (qrCodeTrack.checked) {
-      $(".btn-okiopoint").removeClass("active");
-      qrCodeTrack.checked = false;
-      DetectFn.stop();
-    } else {
-      $(".btn-okiopoint").addClass("active");
-      qrCodeTrack.checked = true;
-      DetectFn.stop();
-      DetectFn.start();
-    }
+  TrackFn.reset();
+  if (qrCodeTrack.checked) {
+    $(".btn-okiopoint").removeClass("active");
+    qrCodeTrack.checked = false;
+    DetectFn.stop();
+  } else {
+    $(".btn-okiopoint").addClass("active");
+    qrCodeTrack.checked = true;
+    DetectFn.stop();
+    DetectFn.start();
   }
 });
 navigator.hid?.addEventListener("connect", async (e) => {
